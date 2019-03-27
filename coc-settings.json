@@ -1,0 +1,9 @@
+{
+  "typescript.suggestionActions.enabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "snippets.textmateSnippetsRoots": [
+    "~/.config/nvim/snippets",
+  ],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript"],
+  "prettier.eslintIntegration": true
+}
