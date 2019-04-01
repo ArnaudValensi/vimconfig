@@ -67,3 +67,10 @@ set colorcolumn=100
 " set ttimeoutlen=0
 
 set number
+
+set langmenu=en_US.UTF-8
+language en_US.UTF-8
+
+" Imrpove update speed of some stuff like git-gutter (100ms instead of delaut 4000ms)
+set updatetime=100
+
