@@ -25,6 +25,10 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
+" Tabs:
+map <D-S-}> gt
+map <D-S-{> gT
+
 " <C-w>s: Split the current window horizontally, reusing the current buffer in the new window.
 " <C-w>v: Split the current window vertically, reusing the current buffer in the new window.
 " <C-w>w: Cycle between open window.
@@ -46,3 +50,18 @@ nnoremap <silent> ]B :blast<CR>
 " <C-r>+: To paste from clipboard in insert mode.
 "
 " TODO: Add map to move to windows: <leader>s[hjkl] for example.
+
+" Movements:
+" <S-{>, <S-}>: Move by block.
+
+nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+
+" autocmd FileType * call LanguageClientMaps()
+
+" function! LanguageClientMaps()
+"     if has_key(g:LanguageClient_serverCommands, &filetype)
+"     nnoremap <buffer> <silent> gd \
+"         :call LanguageClient#textDocument_definition()<CR>
+"     endif
+" endfunction
+"
