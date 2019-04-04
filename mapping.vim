@@ -53,6 +53,14 @@ map <D-S-{> gT
 
 " Movements:
 " <S-{>, <S-}>: Move by block.
+" zt, zz, zb: puts current line top, center, bottom.
+nnoremap <C-j> 10j
+nnoremap <C-k> 10k
+" nnoremap <C-h> b
+" nnoremap <C-l> w
+
+" Delete a char right to the cursor.
+inoremap <C-D> <C-O>x
 
 nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
 

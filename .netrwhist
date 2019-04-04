@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/arnaudvalensi/dev/forest/repos/funkybob-lumber/forest'
+let g:netrw_dirhist_2='/Users/arnaudvalensi/dev/forest/repos/funkybob-lumber'
+let g:netrw_dirhist_3='/Users/arnaudvalensi/dev/forest/repos/funkybob-lumber/forest'
