@@ -72,4 +72,9 @@ nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
 "         :call LanguageClient#textDocument_definition()<CR>
 "     endif
 " endfunction
-"
+
+" Search:
+nmap <Leader>/ <Plug>AgRawSearch
+vmap <Leader>/ <Plug>AgRawVisualSelection
+nmap <Leader>* <Plug>AgRawWordUnderCursor
+
