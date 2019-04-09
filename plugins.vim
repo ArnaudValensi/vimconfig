@@ -13,6 +13,8 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 Plug 'jesseleite/vim-agriculture'
 " Plug 'scrooloose/nerdcommenter'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
