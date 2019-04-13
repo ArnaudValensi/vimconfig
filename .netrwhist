@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server'
-let g:netrw_dirhist_2='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server/queue'
-let g:netrw_dirhist_3='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server'
-let g:netrw_dirhist_4='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server/middlewares'
-let g:netrw_dirhist_5='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server/queue'
-let g:netrw_dirhist_6='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server'
-let g:netrw_dirhist_7='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server/queue'
-let g:netrw_dirhist_8='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server'
+let g:netrw_dirhist_2='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server/graphql'
+let g:netrw_dirhist_3='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server/graphql/schema'
+let g:netrw_dirhist_4='/Users/arnaudvalensi/dev/forest/repos/forestadmin-server'
