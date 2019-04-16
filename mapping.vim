@@ -22,6 +22,10 @@ map <leader>et :tabe %%
 " :edit <filename>: Open a file.
 " :edit %:h <filename>: Open a file in current directory.
 " :edit %% <filename>: Open a file in current directory.
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
