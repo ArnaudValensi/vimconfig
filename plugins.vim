@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'tpope/vim-sensible'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
