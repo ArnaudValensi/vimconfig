@@ -74,3 +74,23 @@ language en_US.UTF-8
 " Imrpove update speed of some stuff like git-gutter (100ms instead of delaut 4000ms)
 set updatetime=100
 
+" Found here https://github.com/JesseLeite/dotfiles/blob/54fbd7c5109eb4a8e8a9d5d3aa67affe5c18efae/.vimrc#L444-L456
+" When using `dd` in the quickfix list, remove the item from the quickfix list.
+" https://stackoverflow.com/questions/42905008/quickfix-list-how-to-add-and-remove-entries
+function! RemoveQuickfixItem()
+  let curqfidx = line('.') - 1
+  let qfall = getqflist()
+  call remove(qfall, curqfidx)
+  call setqflist(qfall, 'r')
+  execute curqfidx + 1 . "cfirst"
+  :copen
+endfunction
+
+autocmd FileType qf map <buffer> dd :call RemoveQuickfixItem()<cr>j
+
+" git mappings
+" nmap <leader>gb :Gblame<CR>
+" nmap <leader>gs :Gstatus<CR>
+" nmap <leader>gc :Gcommit<CR>
+" nmap <leader>gph :Gpush<CR>
+" nmap <leader>gpl :Gpull<CR>

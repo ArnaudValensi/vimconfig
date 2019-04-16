@@ -3,8 +3,11 @@ nnoremap <silent> <leader><space> :Buffers<CR>
 nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>h :History<cr>
-nnoremap <leader>s :Ag<cr>
+nnoremap <leader>a :Ag
+nnoremap <leader>r :Rg
 nnoremap <leader>q :q<cr>
+" fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
+nmap <leader>c :Commands<cr> 
 
 " To find, do * or # for backward
 " Unhighlight by pusing escape keys twice.
