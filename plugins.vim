@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 "     \ }
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'jesseleite/vim-agriculture'
 " Plug 'scrooloose/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
