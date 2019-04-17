@@ -16,12 +16,17 @@ nnoremap <esc><esc> :nohlsearch<cr>
 " Edit window, edit split, edit vertical (split), edit tabe.
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
-map <leader>es :sp %%
+map <leader>eh :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 " :edit <filename>: Open a file.
 " :edit %:h <filename>: Open a file in current directory.
 " :edit %% <filename>: Open a file in current directory.
+
+" Split
+noremap <Leader>wh :<C-u>split<CR>
+noremap <Leader>wv :<C-u>vsplit<CR>
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -35,6 +40,11 @@ nnoremap <silent> ]B :blast<CR>
 " Tabs:
 map <D-S-}> gt
 map <D-S-{> gT
+
+"" Tabs
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
 
 " <C-w>s: Split the current window horizontally, reusing the current buffer in the new window.
 " <C-w>v: Split the current window vertically, reusing the current buffer in the new window.
@@ -85,8 +95,9 @@ nmap <Leader>/ <Plug>AgRawSearch
 vmap <Leader>/ <Plug>AgRawVisualSelection
 nmap <Leader>* <Plug>AgRawWordUnderCursor
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"*****************************************************************************
 " coc.vim
+"*****************************************************************************
 "
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -128,4 +139,22 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+"*****************************************************************************
+" Git
+"*****************************************************************************
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Gcommit<CR>
+noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+noremap <Leader>gr :Gremove<CR>
+
+"*****************************************************************************
+" NERDTree
+"*****************************************************************************
+nnoremap <leader>tf :NERDTreeFind<CR>
+noremap <leader>tt :NERDTreeToggle<CR>
 

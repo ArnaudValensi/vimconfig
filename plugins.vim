@@ -5,6 +5,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 " Plug 'w0rp/ale'
 " Plug 'autozimu/LanguageClient-neovim', {
 "     \ 'branch': 'next',
