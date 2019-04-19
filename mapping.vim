@@ -3,8 +3,8 @@ nnoremap <silent> <leader><space> :Buffers<CR>
 nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>h :History<cr>
-nnoremap <leader>a :Ag
-nnoremap <leader>r :Rg
+nnoremap <leader>a :Ag 
+nnoremap <leader>r :Rg 
 nnoremap <leader>q :q<cr>
 " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 nmap <leader>c :Commands<cr> 
@@ -22,6 +22,10 @@ map <leader>et :tabe %%
 " :edit <filename>: Open a file.
 " :edit %:h <filename>: Open a file in current directory.
 " :edit %% <filename>: Open a file in current directory.
+
+" Tabs
+noremap <leader>tn :tabnew<cr>
+noremap <leader>tc :tabclose<cr>
 
 " Split
 noremap <Leader>wh :<C-u>split<CR>

@@ -21,6 +21,7 @@ Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
 Plug 'metakirby5/codi.vim'
+Plug 'joukevandermaas/vim-ember-hbs'
 
 call plug#end()
 
