@@ -105,6 +105,7 @@ endif
 
 "*****************************************************************************
 " fzf
+" TODO: Add this config for AgRaw and RgRaw,
 "*****************************************************************************
 
 " Augmenting Ag command using fzf#vim#with_preview function
