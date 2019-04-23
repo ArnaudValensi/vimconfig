@@ -2,6 +2,6 @@
   "typescript.suggestionActions.enabled": false,
   "javascript.suggestionActions.enabled": false,
   "snippets.textmateSnippetsRoots": [
-    "/Users/arnaudvalensi/.config/nvim/snippets",
+    "~/.config/nvim/snippets",
   ]
 }
