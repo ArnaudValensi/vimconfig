@@ -23,7 +23,7 @@ Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
 Plug 'metakirby5/codi.vim'
 Plug 'joukevandermaas/vim-ember-hbs'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 call plug#end()
 
