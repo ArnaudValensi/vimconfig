@@ -162,3 +162,12 @@ noremap <Leader>gr :Gremove<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
 noremap <leader>tt :NERDTreeToggle<CR>
 
+"*****************************************************************************
+" Config files
+"*****************************************************************************
+
+nnoremap <leader>vi :vsplit $HOME/.config/nvim/init.vim<cr>
+nnoremap <leader>vm :vsplit $HOME/.config/nvim/mapping.vim<cr>
+nnoremap <leader>vs :vsplit $HOME/.config/nvim/settings.vim<cr>
+nnoremap <leader>vp :vsplit $HOME/.config/nvim/plugins.vim<cr>
+nnoremap <leader>vr :source $MYVIMRC<cr>
