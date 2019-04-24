@@ -32,6 +32,7 @@ set cursorline             " Find the current line quickly.
 set wrapscan               " Searches wrap around end-of-file.
 set report      =0         " Always report changed lines.
 set synmaxcol   =200       " Only highlight the first 200 columns.
+set signcolumn=yes         " Always show signcolumns.
 
 set clipboard=unnamed      " Share the default register with the clipboard.
 
