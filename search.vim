@@ -13,4 +13,5 @@ xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
 " Search without jump.
+" From https://stackoverflow.com/questions/4256697/vim-search-and-highlight-but-do-not-jump
 nnoremap <silent> * :let @/= '\<' . expand('<cword>') . '\>' <bar> set hls <cr>
