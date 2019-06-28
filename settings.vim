@@ -145,4 +145,13 @@ command! -bang -nargs=? -complete=dir Files
 "*****************************************************************************
 " coc-prettier
 "*****************************************************************************
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+"*****************************************************************************
+" OmniSharp
+"*****************************************************************************
+" Use the stdio version of OmniSharp-roslyn:
+let g:OmniSharp_server_stdio = 1
+" use the installed Mono on the system
+" use the installed Mono on the system.
+let g:OmniSharp_server_use_mono = 1

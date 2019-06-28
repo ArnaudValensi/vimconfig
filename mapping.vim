@@ -43,8 +43,7 @@ nnoremap <silent> ]B :blast<CR>
 
 " Tabs
 " nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
+" nnoremap <S-Tab> gT
 
 " <C-w>s: Split the current window horizontally, reusing the current buffer in the new window.
 " <C-w>v: Split the current window vertically, reusing the current buffer in the new window.
@@ -71,24 +70,9 @@ nnoremap <silent> <S-t> :tabnew<CR>
 " Movements:
 " <S-{>, <S-}>: Move by block.
 " zt, zz, zb: puts current line top, center, bottom.
-nnoremap <C-j> 10j
-nnoremap <C-k> 10k
-" nnoremap <C-h> b
-" nnoremap <C-l> w
 
 " Delete a char right to the cursor.
 inoremap <C-D> <C-O>x
-
-nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
-
-" autocmd FileType * call LanguageClientMaps()
-
-" function! LanguageClientMaps()
-"     if has_key(g:LanguageClient_serverCommands, &filetype)
-"     nnoremap <buffer> <silent> gd \
-"         :call LanguageClient#textDocument_definition()<CR>
-"     endif
-" endfunction
 
 " Search:
 nmap <Leader>/ <Plug>AgRawSearch
@@ -101,44 +85,44 @@ nmap <Leader>* <Plug>AgRawWordUnderCursor
 "
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
 
-" Use <c-space> for trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" " Use <c-space> for trigger completion.
+" inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
+" " Coc only does snippet and additional edit on confirm.
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-nnoremap <leader>dp <Plug>(coc-diagnostic-prev)
-nnoremap <leader>dn <Plug>(coc-diagnostic-next)
-nnoremap <leader>dl :CocList diagnostics<cr>
+" nnoremap <leader>dp <Plug>(coc-diagnostic-prev)
+" nnoremap <leader>dn <Plug>(coc-diagnostic-next)
+" nnoremap <leader>dl :CocList diagnostics<cr>
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" " Remap keys for gotos
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
 
-" Use K for show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" " Use K for show documentation in preview window
+" nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-function! s:show_documentation()
-  if &filetype == 'vim'
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+" function! s:show_documentation()
+"   if &filetype == 'vim'
+"     execute 'h '.expand('<cword>')
+"   else
+"     call CocAction('doHover')
+"   endif
+" endfunction
 
 "*****************************************************************************
 " Git
