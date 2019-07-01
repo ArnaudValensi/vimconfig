@@ -221,3 +221,21 @@ nnoremap <Leader>sp :OmniSharpStopServer<CR>
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
+
+"*****************************************************************************
+" Deoplete
+"*****************************************************************************
+" let g:deoplete#enable_at_startup = 1
+
+" call deoplete#custom#option('sources', {
+" \ 'cs': ['omnisharp'],
+" \ })
+
+"*****************************************************************************
+" Asyncomplete
+"*****************************************************************************
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+
+imap <leader><Tab> <Plug>(asyncomplete_force_refresh)

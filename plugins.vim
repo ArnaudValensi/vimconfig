@@ -23,6 +23,7 @@ Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'w0rp/ale'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
+Plug 'prabirshrestha/asyncomplete.vim'
 
 call plug#end()
