@@ -23,7 +23,9 @@ Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'w0rp/ale'
-" Plug 'SirVer/ultisnips'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
 
 call plug#end()

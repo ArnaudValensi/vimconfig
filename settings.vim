@@ -223,15 +223,6 @@ let g:ale_linters = {
 \}
 
 "*****************************************************************************
-" Deoplete
-"*****************************************************************************
-" let g:deoplete#enable_at_startup = 1
-
-" call deoplete#custom#option('sources', {
-" \ 'cs': ['omnisharp'],
-" \ })
-
-"*****************************************************************************
 " Asyncomplete
 "*****************************************************************************
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -239,3 +230,16 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 imap <leader><Tab> <Plug>(asyncomplete_force_refresh)
+
+"*****************************************************************************
+" Neosnippet
+"*****************************************************************************
+call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
+    \ 'name': 'neosnippet',
+    \ 'whitelist': ['*'],
+    \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
+    \ }))
+
+imap <C-e>     <Plug>(neosnippet_expand_or_jump)
+smap <C-e>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-e>     <Plug>(neosnippet_expand_target)
