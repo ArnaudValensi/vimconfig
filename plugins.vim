@@ -10,6 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jesseleite/vim-agriculture'
+Plug 'tpope/vim-dispatch'
+Plug 'OmniSharp/omnisharp-vim'
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 " Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
@@ -20,6 +22,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/BufOnly.vim'
-Plug 'OmniSharp/omnisharp-vim'
+Plug 'w0rp/ale'
+Plug 'SirVer/ultisnips'
 
 call plug#end()
