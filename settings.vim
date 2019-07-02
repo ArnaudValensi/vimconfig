@@ -261,3 +261,10 @@ xmap <C-e>     <Plug>(neosnippet_expand_target)
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:bufferline_echo = 0
+
+
+"*****************************************************************************
+" C#
+"*****************************************************************************
+" setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
+autocmd FileType cs compiler xbuild
