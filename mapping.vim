@@ -81,6 +81,10 @@ nmap <Leader>/ <Plug>AgRawSearch
 vmap <Leader>/ <Plug>AgRawVisualSelection
 nmap <Leader>* <Plug>AgRawWordUnderCursor
 
+" Zoom
+noremap Zi <c-w>_ \| <c-w>\|
+noremap Zo <c-w>=
+
 "*****************************************************************************
 " coc.vim
 "*****************************************************************************

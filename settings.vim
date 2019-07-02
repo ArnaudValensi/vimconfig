@@ -157,10 +157,10 @@ let g:OmniSharp_server_use_mono = 0
 
 let g:OmniSharp_server_path = '/Users/arnaud/dev/tools/omnisharp-osx-1.32.20/run'
 
-" Don't autoselect first omnicomplete option, show options even if there is only
-" one (so the preview documentation is accessible). Remove 'preview' if you
-" don't want to see any documentation whatsoever.
-set completeopt=longest,menuone,preview
+" Highlight on BufEnter and InsertLeave
+let g:OmniSharp_highlight_types = 2
+
+let g:omnicomplete_fetch_full_documentation = 1
 
 " Set desired preview window height for viewing documentation.
 " You might also want to look at the echodoc plugin.
@@ -230,6 +230,17 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 imap <leader><Tab> <Plug>(asyncomplete_force_refresh)
+
+" Don't autoselect first omnicomplete option, show options even if there is only
+" one (so the preview documentation is accessible). Remove 'preview' if you
+" don't want to see any documentation whatsoever.
+set completeopt=menuone,noinsert,noselect,preview
+" Disable comleteopt overriding.
+let g:asyncomplete_auto_completeopt = 0
+
+let g:asyncomplete_auto_popup = 1
+
+autocmd CompleteDone * pclose
 
 "*****************************************************************************
 " Neosnippet
