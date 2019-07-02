@@ -42,6 +42,12 @@ nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 nnoremap <silent> ]q :cnext<cr>
 nnoremap <silent> [q :cprevious<cr>
+nnoremap <silent> ]Q :clast<cr>
+nnoremap <silent> [Q :cfirst<cr>
+nnoremap <silent> ]l :lnext<cr>
+nnoremap <silent> [l :lprevious<cr>
+nnoremap <silent> ]L :llast<cr>
+nnoremap <silent> [L :lfirst<cr>
 
 " Tabs
 " nnoremap <Tab> gt
