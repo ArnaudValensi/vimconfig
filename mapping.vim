@@ -40,6 +40,8 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+nnoremap <silent> [t :tabprevious<CR>
+nnoremap <silent> ]t :tabnext<CR>
 nnoremap <silent> ]q :cnext<cr>
 nnoremap <silent> [q :cprevious<cr>
 nnoremap <silent> ]Q :clast<cr>
@@ -83,9 +85,9 @@ nnoremap <silent> [L :lfirst<cr>
 inoremap <C-D> <C-O>x
 
 " Search:
-nmap <Leader>/ <Plug>AgRawSearch
-vmap <Leader>/ <Plug>AgRawVisualSelection
-nmap <Leader>* <Plug>AgRawWordUnderCursor
+nmap <Leader>/ <Plug>RgRawSearch
+vmap <Leader>/ <Plug>RgRawVisualSelection
+nmap <Leader>* <Plug>RgRawWordUnderCursor
 
 " Zoom
 noremap Zi <c-w>_ \| <c-w>\|
