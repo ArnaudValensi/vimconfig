@@ -27,5 +27,8 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
 
 call plug#end()
