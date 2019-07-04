@@ -1,13 +1,13 @@
 let g:mapleader = "\<Space>"
 nnoremap <silent> <leader><space> :Buffers<CR>
-nnoremap <silent> <leader>bd :bd<CR>
-nnoremap <leader>f :Files<cr>
+nnoremap <silent> <leader>bd :bp\|bd #<CR>
+nnoremap <leader>ff :Files<cr>
 nnoremap <leader>h :History<cr>
 nnoremap <leader>a :Ag 
 nnoremap <leader>r :Rg 
 nnoremap <leader>q :q<cr>
 " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
-nmap <leader>c :Commands<cr> 
+nmap <leader>vc :Commands<cr>
 
 " To find, do * or # for backward
 " Unhighlight by pusing escape keys twice.
@@ -165,3 +165,52 @@ nnoremap <leader>vm :vsplit $HOME/.config/nvim/mapping.vim<cr>
 nnoremap <leader>vs :vsplit $HOME/.config/nvim/settings.vim<cr>
 nnoremap <leader>vp :vsplit $HOME/.config/nvim/plugins.vim<cr>
 nnoremap <leader>vr :source $MYVIMRC<cr>
+
+"*****************************************************************************
+" Config files
+"*****************************************************************************
+augroup omnisharp_commands
+    autocmd!
+
+    " Show type information automatically when the cursor stops moving
+    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+
+    " The following commands are contextual, based on the cursor position.
+    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>ci :OmniSharpFindImplementations<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>cs :OmniSharpFindSymbol<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>cu :OmniSharpFindUsages<CR>
+
+    " Finds members in the current buffer
+    autocmd FileType cs nnoremap <buffer> <Leader>cm :OmniSharpFindMembers<CR>
+
+    autocmd FileType cs nnoremap <buffer> <Leader>cx :OmniSharpFixUsings<CR>
+    " autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>cd:OmniSharpDocumentation<CR>
+    autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
+    autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
+
+    " Navigate up and down by method/property/field
+    autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
+    autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
+
+    " Find all code errors/warnings for the current solution and populate the quickfix window
+    autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
+
+    " Rename with dialog
+    autocmd FileType cs nnoremap <buffer> <Leader>cr :OmniSharpRename<CR>
+
+    " Contextual code actions (uses fzf, CtrlP or unite.vim when available)
+    autocmd FileType cs nnoremap <buffer> <Leader>ca :OmniSharpGetCodeActions<CR>
+    " Run code actions with text selected in visual mode to extract method
+    autocmd FileType cs xnoremap <buffer> <Leader>ca :call OmniSharp#GetCodeActions('visual')<CR>
+
+    autocmd FileType cs nnoremap <buffer> <Leader>cf :OmniSharpCodeFormat<CR>
+augroup END
+
+" Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
+command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
+
+" Start the omnisharp server for the current solution
+nnoremap <Leader>ss :OmniSharpStartServer<CR>
+nnoremap <Leader>sp :OmniSharpStopServer<CR>

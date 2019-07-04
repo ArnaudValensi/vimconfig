@@ -103,6 +103,8 @@ if $TERM_PROGRAM =~ "iTerm"
   set termguicolors
 endif
 
+" Remove trailing whitespaces.
+autocmd FileType cs,js autocmd BufWritePre <buffer> %s/\s\+$//e
 
 "*****************************************************************************
 " fzf
@@ -169,52 +171,6 @@ set previewheight=5
 " Update symantic highlighting on BufEnter and InsertLeave
 let g:OmniSharp_highlight_types = 2
 
-augroup omnisharp_commands
-    autocmd!
-
-    " Show type information automatically when the cursor stops moving
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-
-    " The following commands are contextual, based on the cursor position.
-    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
-
-    " Finds members in the current buffer
-    autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
-
-    autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
-    " autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
-    autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
-    autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
-
-    " Navigate up and down by method/property/field
-    autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
-    autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
-
-    " Find all code errors/warnings for the current solution and populate the quickfix window
-    autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
-augroup END
-
-" " Contextual code actions (uses fzf, CtrlP or unite.vim when available)
-" nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
-" " Run code actions with text selected in visual mode to extract method
-" xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
-
-" Rename with dialog
-nnoremap <Leader>nm :OmniSharpRename<CR>
-nnoremap <F2> :OmniSharpRename<CR>
-" Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
-command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
-
-nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
-
-" Start the omnisharp server for the current solution
-nnoremap <Leader>ss :OmniSharpStartServer<CR>
-nnoremap <Leader>sp :OmniSharpStopServer<CR>
-
 "*****************************************************************************
 " ALE
 "*****************************************************************************
@@ -262,9 +218,23 @@ xmap <C-e>     <Plug>(neosnippet_expand_target)
 " let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:bufferline_echo = 0
 
-
 "*****************************************************************************
 " C#
 "*****************************************************************************
-" setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
-autocmd FileType cs compiler xbuild
+" autocmd FileType cs compiler xbuild
+autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
+
+"*****************************************************************************
+" Quickfix list
+"*****************************************************************************
+" From https://vim.fandom.com/wiki/Automatically_open_the_quickfix_window_on_:make
+" Automatically open, but do not go to (if there are errors) the quickfix /
+" location list window, or close it when is has become empty.
+"
+" Note: Must allow nesting of autocmds to enable any customizations for quickfix
+" buffers.
+" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
+" (but not if it's already open). However, as part of the autocmd, this doesn't
+" seem to happen.
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
