@@ -7,8 +7,8 @@ syntax on                  " Enable syntax highlighting.
 
 set autoindent             " Indent according to previous line.
 set expandtab              " Use spaces instead of tabs.
-set softtabstop =2         " Tab key indents by 4 spaces.
-set shiftwidth  =2         " >> indents by 4 spaces.
+set softtabstop =2         " Tab key indents by 2 spaces.
+set shiftwidth  =2         " >> indents by 2 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
 
 set backspace   =indent,eol,start  " Make backspace work as you would expect.
@@ -38,9 +38,9 @@ set clipboard=unnamed      " Share the default register with the clipboard.
 
 set list                   " Show non-printable characters.
 if has('multi_byte') && &encoding ==# 'utf-8'
-  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+  let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:~'
 else
-  let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
+  let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.,trail:~'
 endif
 
 " create directory if needed
