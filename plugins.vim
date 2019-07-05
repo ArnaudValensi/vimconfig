@@ -35,6 +35,8 @@ Plug 'bling/vim-bufferline'
 " Alternatives:
 "  - https://github.com/Raimondi/delimitMate
 "  - https://github.com/jiangmiao/auto-pairs
-Plug 'cohama/lexima.vim'
+" Plug 'cohama/lexima.vim'
+" Plug 'raimondi/delimitmate'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
