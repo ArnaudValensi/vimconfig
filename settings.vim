@@ -89,8 +89,6 @@ function! RemoveQuickfixItem()
   :copen
 endfunction
 
-autocmd FileType qf map <buffer> dd :call RemoveQuickfixItem()<cr>j
-
 " git mappings
 " nmap <leader>gb :Gblame<CR>
 " nmap <leader>gs :Gstatus<CR>
@@ -103,9 +101,17 @@ if $TERM_PROGRAM =~ "iTerm"
   set termguicolors
 endif
 
-" Remove trailing whitespaces.
-autocmd FileType cs,js,make autocmd BufWritePre <buffer> %s/\s\+$//e
+augroup Misc
+  autocmd!
 
+  autocmd FileType qf map <buffer> dd :call RemoveQuickfixItem()<cr>j
+
+  " Remove trailing whitespaces.
+  autocmd FileType cs,js,make autocmd BufWritePre <buffer> %s/\s\+$//e
+
+  " Set comment style
+  autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+augroup END
 "*****************************************************************************
 " fzf
 " TODO: Add this config for AgRaw and RgRaw,
