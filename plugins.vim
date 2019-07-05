@@ -30,5 +30,6 @@ Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
+Plug 'cohama/lexima.vim'
 
 call plug#end()

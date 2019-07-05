@@ -104,7 +104,7 @@ if $TERM_PROGRAM =~ "iTerm"
 endif
 
 " Remove trailing whitespaces.
-autocmd FileType cs,js autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType cs,js,make autocmd BufWritePre <buffer> %s/\s\+$//e
 
 "*****************************************************************************
 " fzf
@@ -223,6 +223,7 @@ let g:bufferline_echo = 0
 "*****************************************************************************
 " autocmd FileType cs compiler xbuild
 autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
+" autocmd FileType cs setlocal errorformat=\▸%#at:\ %#'%f:%l:%c
 
 "*****************************************************************************
 " Quickfix list
