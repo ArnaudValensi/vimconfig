@@ -111,6 +111,8 @@ augroup Misc
 
   " Set comment style
   autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
+  autocmd FileType cs setlocal shiftwidth=4 softtabstop=4 expandtab
 augroup END
 "*****************************************************************************
 " fzf

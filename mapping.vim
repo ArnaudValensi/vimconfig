@@ -51,6 +51,8 @@ nnoremap <silent> [l :lprevious<cr>
 nnoremap <silent> ]L :llast<cr>
 nnoremap <silent> [L :lfirst<cr>
 
+nnoremap <leader>bo :BufOnly<cr>
+
 " Tabs
 " nnoremap <Tab> gt
 " nnoremap <S-Tab> gT
