@@ -241,7 +241,28 @@ augroup c_commands
   autocmd FileType c noremap <Leader>oo :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
   autocmd FileType c noremap <Leader>ov :vs %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
   autocmd FileType c noremap <Leader>oh :sp %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
+  autocmd FileType c noremap gd :YcmCompleter GoTo<CR>
   " autocmd FileType c noremap <Leader>oc :e %<.c<CR>
   " autocmd FileType c noremap <Leader>oh :e %<.h<CR>
 augroup END
+
+"*****************************************************************************
+" YouCompleMe/UltiSnip
+"*****************************************************************************
+let g:ycm_key_list_select_completion=["<tab>"]
+let g:ycm_key_list_previous_completion=["<S-tab>"]
+
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<NUL>"
+let g:ulti_expand_or_jump_res = 0
+function! <SID>ExpandSnippetOrReturn()
+  let snippet = UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return snippet
+  else
+    return "\<CR>"
+  endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
 
