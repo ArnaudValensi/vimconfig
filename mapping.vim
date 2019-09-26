@@ -55,6 +55,11 @@ nnoremap <silent> [L :lfirst<cr>
 
 nnoremap <leader>bo :BufOnly<cr>
 
+" Stamp
+" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+nnoremap S ciw<C-r>0<Esc>
+vnoremap S "_d"0P
+
 " Tabs
 " nnoremap <Tab> gt
 " nnoremap <S-Tab> gT
@@ -242,6 +247,7 @@ augroup c_commands
   autocmd FileType c noremap <Leader>ov :vs %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
   autocmd FileType c noremap <Leader>oh :sp %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
   autocmd FileType c noremap gd :YcmCompleter GoTo<CR>
+  autocmd FileType c noremap cc :make<CR>
   " autocmd FileType c noremap <Leader>oc :e %<.c<CR>
   " autocmd FileType c noremap <Leader>oh :e %<.h<CR>
 augroup END
