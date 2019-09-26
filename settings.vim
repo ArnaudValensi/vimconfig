@@ -186,38 +186,38 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
 
-"*****************************************************************************
-" Asyncomplete
-"*****************************************************************************
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+""*****************************************************************************
+"" Asyncomplete
+""*****************************************************************************
+"inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
-imap <leader><Tab> <Plug>(asyncomplete_force_refresh)
+"imap <leader><Tab> <Plug>(asyncomplete_force_refresh)
 
-" Don't autoselect first omnicomplete option, show options even if there is only
-" one (so the preview documentation is accessible). Remove 'preview' if you
-" don't want to see any documentation whatsoever.
-set completeopt=menuone,noinsert,noselect,preview
-" Disable comleteopt overriding.
-let g:asyncomplete_auto_completeopt = 0
+"" Don't autoselect first omnicomplete option, show options even if there is only
+"" one (so the preview documentation is accessible). Remove 'preview' if you
+"" don't want to see any documentation whatsoever.
+"set completeopt=menuone,noinsert,noselect,preview
+"" Disable comleteopt overriding.
+"let g:asyncomplete_auto_completeopt = 0
 
-let g:asyncomplete_auto_popup = 1
+"let g:asyncomplete_auto_popup = 1
 
-autocmd CompleteDone * pclose
+"autocmd CompleteDone * pclose
 
-"*****************************************************************************
-" Neosnippet
-"*****************************************************************************
-call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
-    \ 'name': 'neosnippet',
-    \ 'whitelist': ['*'],
-    \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
-    \ }))
+""*****************************************************************************
+"" Neosnippet
+""*****************************************************************************
+"call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
+"    \ 'name': 'neosnippet',
+"    \ 'whitelist': ['*'],
+"    \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
+"    \ }))
 
-imap <C-e>     <Plug>(neosnippet_expand_or_jump)
-smap <C-e>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-e>     <Plug>(neosnippet_expand_target)
+"imap <C-e>     <Plug>(neosnippet_expand_or_jump)
+"smap <C-e>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-e>     <Plug>(neosnippet_expand_target)
 
 "*****************************************************************************
 " Airline
