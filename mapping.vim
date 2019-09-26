@@ -8,6 +8,8 @@ nnoremap <leader>r :Rg
 nnoremap <leader>q :q<cr>
 " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 nmap <leader>vc :Commands<cr>
+" allow the . to execute once for each line of a visual selection
+vnoremap . :normal .<CR>
 
 " To find, do * or # for backward
 " Unhighlight by pusing escape keys twice.
