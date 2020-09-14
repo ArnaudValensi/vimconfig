@@ -2,6 +2,8 @@
 " We set it explicitely to make our position clear!
 set nocompatible
 
+let g:node_host_prog = expand("~/.fnm/node-versions/v12.18.3/installation/lib/node_modules/neovim/bin/cli.js")
+
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
 
