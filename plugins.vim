@@ -5,7 +5,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jesseleite/vim-agriculture'
@@ -34,6 +34,7 @@ Plug 'bling/vim-bufferline'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'ziglang/zig.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'kevinhwang91/rnvimr'
 
 " Auto pair
 " Alternatives:
