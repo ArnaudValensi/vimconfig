@@ -5,6 +5,9 @@ set nocompatible
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
 
+set smarttab               " Makes tabbing smarter will realize you have 2 vs 4
+set expandtab              " Converts tabs to spaces
+set smartindent            " Makes indenting smart
 set autoindent             " Indent according to previous line.
 set expandtab              " Use spaces instead of tabs.
 set softtabstop =2         " Tab key indents by 2 spaces.
@@ -34,7 +37,8 @@ set report      =0         " Always report changed lines.
 set synmaxcol   =200       " Only highlight the first 200 columns.
 set signcolumn=yes         " Always show signcolumns.
 
-set clipboard=unnamed      " Share the default register with the clipboard.
+set clipboard=unnamedplus  " Share the default register with the clipboard.
+set mouse=a                " Enable your mouse
 
 set list                   " Show non-printable characters.
 if has('multi_byte') && &encoding ==# 'utf-8'
