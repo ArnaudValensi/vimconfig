@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'ziglang/zig.vim'
 
 " Auto pair
 " Alternatives:
@@ -41,5 +42,6 @@ Plug 'ycm-core/YouCompleteMe'
 " Plug 'cohama/lexima.vim'
 " Plug 'raimondi/delimitmate'
 Plug 'jiangmiao/auto-pairs'
+" Plug 'lyuts/vim-rtags'
 
 call plug#end()

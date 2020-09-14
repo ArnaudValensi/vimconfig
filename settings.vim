@@ -62,6 +62,9 @@ set undodir     =$HOME/.vim/files/undo/
 " viminfo files
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+" auto read file on external change
+set autoread
+
 let g:dracula_colorterm = 0
 colorscheme dracula
 

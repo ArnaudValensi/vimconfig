@@ -150,14 +150,14 @@ noremap <leader>zo <c-w>=
 "*****************************************************************************
 " Git
 "*****************************************************************************
-noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
+" noremap <Leader>ga :Gwrite<CR>
+" noremap <Leader>gc :Gcommit<CR>
+" noremap <Leader>gsh :Gpush<CR>
+" noremap <Leader>gll :Gpull<CR>
+" noremap <Leader>gs :Gstatus<CR>
+" noremap <Leader>gb :Gblame<CR>
+" noremap <Leader>gd :Gvdiff<CR>
+" noremap <Leader>gr :Gremove<CR>
 
 "*****************************************************************************
 " NERDTree
@@ -246,8 +246,11 @@ augroup c_commands
   autocmd FileType c noremap <Leader>oo :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
   autocmd FileType c noremap <Leader>ov :vs %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
   autocmd FileType c noremap <Leader>oh :sp %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
-  autocmd FileType c noremap gd :YcmCompleter GoTo<CR>
-  autocmd FileType c noremap cc :make<CR>
+  autocmd FileType c noremap cc :make run<CR>
+  autocmd FileType c noremap <Leader>gd :YcmCompleter GoTo<CR>
+  autocmd FileType c noremap <Leader>gi <C-]>
+  autocmd FileType c noremap <Leader>gn :tn<CR>
+  autocmd FileType c noremap <Leader>gp :tp<CR>
   " autocmd FileType c noremap <Leader>oc :e %<.c<CR>
   " autocmd FileType c noremap <Leader>oh :e %<.h<CR>
 augroup END
@@ -255,6 +258,7 @@ augroup END
 "*****************************************************************************
 " YouCompleMe/UltiSnip
 "*****************************************************************************
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion=["<tab>"]
 let g:ycm_key_list_previous_completion=["<S-tab>"]
 
