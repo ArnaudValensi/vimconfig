@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'ziglang/zig.vim'
+Plug 'sheerun/vim-polyglot'
 
 " Auto pair
 " Alternatives:
