@@ -54,21 +54,21 @@ if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
   call mkdir($HOME.'/.vim/files')
 endif
 
-" backup files
+" Backup files.
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
 set backupskip  =
-" swap files
+" Swap files.
 set directory   =$HOME/.vim/files/swap/
 set updatecount =100
-" undo files
+" Undo files.
 set undofile
 set undodir     =$HOME/.vim/files/undo/
-" viminfo files
+" Viminfo files.
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
-" auto read file on external change
+" Auto read file on external change.
 set autoread
 
 let g:dracula_colorterm = 0
@@ -86,34 +86,13 @@ language en_US.UTF-8
 " Imrpove update speed of some stuff like git-gutter (100ms instead of delaut 4000ms)
 set updatetime=100
 
-" When using `dd` in the quickfix list, remove the item from the quickfix list.
-" Found here https://github.com/JesseLeite/dotfiles/blob/54fbd7c5109eb4a8e8a9d5d3aa67affe5c18efae/.vimrc#L444-L456
-" https://stackoverflow.com/questions/42905008/quickfix-list-how-to-add-and-remove-entries
-function! RemoveQuickfixItem()
-  let curqfidx = line('.') - 1
-  let qfall = getqflist()
-  call remove(qfall, curqfidx)
-  call setqflist(qfall, 'r')
-  execute curqfidx + 1 . "cfirst"
-  :copen
-endfunction
-
-" git mappings
-" nmap <leader>gb :Gblame<CR>
-" nmap <leader>gs :Gstatus<CR>
-" nmap <leader>gc :Gcommit<CR>
-" nmap <leader>gph :Gpush<CR>
-" nmap <leader>gpl :Gpull<CR>
-
-" gui colors if running iTerm
+" Gui colors if running iTerm.
 if $TERM_PROGRAM =~ "iTerm"
   set termguicolors
 endif
 
 augroup Misc
   autocmd!
-
-  autocmd FileType qf map <buffer> dd :call RemoveQuickfixItem()<cr>j
 
   " Remove trailing whitespaces.
   autocmd FileType cs,js,make autocmd BufWritePre <buffer> %s/\s\+$//e
@@ -123,126 +102,6 @@ augroup Misc
 
   autocmd FileType cs setlocal shiftwidth=4 softtabstop=4 expandtab
 augroup END
-"*****************************************************************************
-" fzf
-" TODO: Add this config for AgRaw and RgRaw,
-"*****************************************************************************
-
-" Augmenting Ag command using fzf#vim#with_preview function
-"   * fzf#vim#with_preview([[options], [preview window], [toggle keys...]])
-"     * For syntax-highlighting, Ruby and any of the following tools are required:
-"       - Bat: https://github.com/sharkdp/bat
-"       - Highlight: http://www.andre-simon.de/doku/highlight/en/highlight.php
-"       - CodeRay: http://coderay.rubychan.de/
-"       - Rouge: https://github.com/jneen/rouge
-"
-"   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
-"   :Ag! - Start fzf in fullscreen and display the preview window above
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \                 <bang>0)
-
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-
-" Likewise, Files command with preview window
-" command! -bang -nargs=? -complete=dir Files
-"   \ call fzf#vim#files(<q-args>,
-"   \                    fzf#vim#with_preview('right:50%:hidden', '?'),
-"   \                    <bang>0)
-
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-
-"*****************************************************************************
-" coc-prettier
-"*****************************************************************************
-" command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-"*****************************************************************************
-" OmniSharp
-"*****************************************************************************
-" Use the stdio version of OmniSharp-roslyn:
-let g:OmniSharp_server_stdio = 1
-" use the installed Mono on the system.
-let g:OmniSharp_server_use_mono = 0
-
-let g:OmniSharp_server_path = '/Users/arnaud/dev/tools/omnisharp-osx-1.32.20/run'
-
-" Highlight on BufEnter and InsertLeave
-let g:OmniSharp_highlight_types = 2
-
-let g:omnicomplete_fetch_full_documentation = 1
-
-" Set desired preview window height for viewing documentation.
-" You might also want to look at the echodoc plugin.
-set previewheight=5
-
-" Update symantic highlighting on BufEnter and InsertLeave
-let g:OmniSharp_highlight_types = 2
-
-"*****************************************************************************
-" ALE
-"*****************************************************************************
-let g:ale_linters = {
-\ 'cs': ['OmniSharp']
-\}
-
-""*****************************************************************************
-"" Asyncomplete
-""*****************************************************************************
-"inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-
-"imap <leader><Tab> <Plug>(asyncomplete_force_refresh)
-
-"" Don't autoselect first omnicomplete option, show options even if there is only
-"" one (so the preview documentation is accessible). Remove 'preview' if you
-"" don't want to see any documentation whatsoever.
-"set completeopt=menuone,noinsert,noselect,preview
-"" Disable comleteopt overriding.
-"let g:asyncomplete_auto_completeopt = 0
-
-"let g:asyncomplete_auto_popup = 1
-
-"autocmd CompleteDone * pclose
-
-""*****************************************************************************
-"" Neosnippet
-""*****************************************************************************
-"call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
-"    \ 'name': 'neosnippet',
-"    \ 'whitelist': ['*'],
-"    \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
-"    \ }))
-
-"imap <C-e>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-e>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-e>     <Plug>(neosnippet_expand_target)
-
-"*****************************************************************************
-" Airline
-"*****************************************************************************
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:bufferline_echo = 0
-
-"*****************************************************************************
-" C#
-"*****************************************************************************
-" autocmd FileType cs compiler xbuild
-autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
-" autocmd FileType cs setlocal errorformat=\▸%#at:\ %#'%f:%l:%c
 
 "*****************************************************************************
 " Quickfix list
@@ -256,5 +115,24 @@ autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
 " Note: Normally, :cwindow jumps to the quickfix window if the command opens it
 " (but not if it's already open). However, as part of the autocmd, this doesn't
 " seem to happen.
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
+"
+" When using `dd` in the quickfix list, remove the item from the quickfix list.
+" Found here https://github.com/JesseLeite/dotfiles/blob/54fbd7c5109eb4a8e8a9d5d3aa67affe5c18efae/.vimrc#L444-L456
+" https://stackoverflow.com/questions/42905008/quickfix-list-how-to-add-and-remove-entries
+function! RemoveQuickfixItem()
+  let curqfidx = line('.') - 1
+  let qfall = getqflist()
+  call remove(qfall, curqfidx)
+  call setqflist(qfall, 'r')
+  execute curqfidx + 1 . "cfirst"
+  :copen
+endfunction
+
+augroup Quickfix
+  autocmd!
+
+  autocmd FileType qf map <buffer> dd :call RemoveQuickfixItem()<cr>j
+  autocmd QuickFixCmdPost [^l]* nested cwindow
+  autocmd QuickFixCmdPost    l* nested lwindow
+augroup END
+

@@ -1,5 +1,26 @@
+" Use the stdio version of OmniSharp-roslyn:
+let g:OmniSharp_server_stdio = 1
+" use the installed Mono on the system.
+let g:OmniSharp_server_use_mono = 0
+
+let g:OmniSharp_server_path = '/Users/arnaud/dev/tools/omnisharp-osx-1.32.20/run'
+
+" Highlight on BufEnter and InsertLeave
+let g:OmniSharp_highlight_types = 2
+
+let g:omnicomplete_fetch_full_documentation = 1
+
+" Set desired preview window height for viewing documentation.
+" You might also want to look at the echodoc plugin.
+set previewheight=5
+
+" Update symantic highlighting on BufEnter and InsertLeave
+let g:OmniSharp_highlight_types = 2
+
 augroup omnisharp_commands
   autocmd!
+
+  autocmd FileType cs setlocal errorformat=\ %#%f(%l\\\,%c):\ %m
 
   " Show type information automatically when the cursor stops moving
   " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
