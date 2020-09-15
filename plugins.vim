@@ -37,6 +37,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'kevinhwang91/rnvimr'
 Plug 'liuchengxu/vim-which-key'
 Plug 'brooth/far.vim'
+Plug 'alok/notational-fzf-vim'
 
 " Auto pair
 " Alternatives:

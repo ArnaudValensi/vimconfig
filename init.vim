@@ -9,6 +9,7 @@ source ~/.config/nvim/plug-config/ycp-ultisnip.vim
 source ~/.config/nvim/plug-config/ale.vim
 source ~/.config/nvim/plug-config/airline.vim
 source ~/.config/nvim/plug-config/fzf.vim
+source ~/.config/nvim/plug-config/notational-fzf.vim
 " source ~/.config/nvim/plug-config/coc.vim
 " source ~/.config/nvim/plug-config/omnisharp.vim
 " source ~/.config/nvim/plug-config/c.vim

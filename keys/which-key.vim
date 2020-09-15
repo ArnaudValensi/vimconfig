@@ -103,6 +103,11 @@ let g:which_key_map.s = {
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
       \ }
 
+let g:which_key_map.u = {
+      \ 'name' : '+utils' ,
+      \ 'n' : [':NV!'    , 'notational-fzf'],
+      \ }
+
 " " g is for git
 " let g:which_key_map.g = {
 "       \ 'name' : '+git' ,
