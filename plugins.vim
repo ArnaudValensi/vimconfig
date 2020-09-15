@@ -36,6 +36,7 @@ Plug 'ziglang/zig.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'kevinhwang91/rnvimr'
 Plug 'liuchengxu/vim-which-key'
+Plug 'brooth/far.vim'
 
 " Auto pair
 " Alternatives:

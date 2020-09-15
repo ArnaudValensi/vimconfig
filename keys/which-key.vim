@@ -35,7 +35,6 @@ let g:which_key_map['r'] = [ ':RnvimrToggle'     , 'ranger' ]
 
 " Group mappings
 
-" s is for search
 let g:which_key_map.f = {
       \ 'name' : '+search'  ,
       \ '/' : [':History/'  , 'history'],
@@ -64,7 +63,6 @@ let g:which_key_map.f = {
       \ 'y' : [':Filetypes' , 'file types'],
       \ }
 
-" b is for buffer
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ 'd' : [':bdelete'  , 'delete buffer'],
@@ -99,12 +97,11 @@ let g:which_key_map['w'] = {
       \ '?' : ['Windows'    , 'fzf window'],
       \ }
 
-" " f is for find and replace
-" let g:which_key_map.f = {
-"       \ 'name' : '+find & replace' ,
-"       \ 'b' : [':Farr --source=vimgrep'    , 'buffer'],
-"       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
-"       \ }
+let g:which_key_map.s = {
+      \ 'name' : '+find & replace' ,
+      \ 'b' : [':Farr --source=vimgrep'    , 'buffer'],
+      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+      \ }
 
 " " g is for git
 " let g:which_key_map.g = {
