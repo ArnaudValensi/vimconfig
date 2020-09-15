@@ -1,13 +1,10 @@
 let g:mapleader = "\<Space>"
-nnoremap <silent> <leader><space> :Buffers<CR>
-nnoremap <silent> <leader>bd :bp\|bd #<CR>
-nnoremap <leader>ff :Files<cr>
-nnoremap <leader>h :History<cr>
-nnoremap <leader>a :Ag 
-nnoremap <leader>r :Rg 
-nnoremap <leader>q :q<cr>
-" fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
-nmap <leader>vc :Commands<cr>
+
+" TAB in general mode will move to text buffer
+nnoremap <silent> <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <silent> <S-TAB> :bprevious<CR>
+
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
 
@@ -15,34 +12,16 @@ vnoremap . :normal .<CR>
 " Unhighlight by pusing escape keys twice.
 nnoremap <esc><esc> :nohlsearch<cr>
 
-" Edit window, edit split, edit vertical (split), edit tabe.
-cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
-map <leader>ew :e %%
-map <leader>eh :sp %%
-map <leader>ev :vsp %%
-map <leader>et :tabe %%
-" :edit <filename>: Open a file.
-" :edit %:h <filename>: Open a file in current directory.
-" :edit %% <filename>: Open a file in current directory.
-
-" Tabs
-noremap <leader>tn :tabnew<cr>
-noremap <leader>tc :tabclose<cr>
-
-" Split
-noremap <Leader>wh :<C-u>split<CR>
-noremap <Leader>wv :<C-u>vsplit<CR>
-
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Use alt + hjkl to resize windows.
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-h> :vertical resize -2<CR>
-nnoremap <M-l> :vertical resize +2<CR>
+nnoremap <M-j> :resize -3<CR>
+nnoremap <M-k> :resize +3<CR>
+nnoremap <M-h> :vertical resize -3<CR>
+nnoremap <M-l> :vertical resize +3<CR>
 
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
@@ -59,42 +38,10 @@ nnoremap <silent> [l :lprevious<cr>
 nnoremap <silent> ]L :llast<cr>
 nnoremap <silent> [L :lfirst<cr>
 
-nnoremap <leader>bo :BufOnly<cr>
-
 " Stamp
 " https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
-nnoremap S ciw<C-r>0<Esc>
-vnoremap S "_d"0P
-
-" Tabs
-" nnoremap <Tab> gt
-" nnoremap <S-Tab> gT
-
-" <C-w>s: Split the current window horizontally, reusing the current buffer in the new window.
-" <C-w>v: Split the current window vertically, reusing the current buffer in the new window.
-" <C-w>w: Cycle between open window.
-" <C-w>h: Focus the window to the left.
-" <C-w>j: Focus the window below.
-" <C-w>k: Focus the window above.
-" <C-w>l: Focus the window to the right.
-" :clo[se] <C-w>c: Close the active window.
-" :on[ly] <C-w>o: Keep only the active window, closing all others.
-" <C-w>=: Equalize width and height of all windows.
-" <C-w>_: Maximize height of the active window.
-" <C-w>|: Maximize width of the active window.
-"
-" :tab split: Open the current window into a new tab
-"   
-" + and * anre the system clipboard register.
-" "+p: To paste from the clipboard.
-" "+yy: To copy the current line in system clipboard.
-" <C-r>+: To paste from clipboard in insert mode.
-"
-" TODO: Add map to move to windows: <leader>s[hjkl] for example.
-
-" Movements:
-" <S-{>, <S-}>: Move by block.
-" zt, zz, zb: puts current line top, center, bottom.
+" nnoremap S ciw<C-r>0<Esc>
+" vnoremap S "_d"0P
 
 " Delete a char right to the cursor.
 inoremap <C-D> <C-O>x
@@ -103,10 +50,6 @@ inoremap <C-D> <C-O>x
 nmap <Leader>/ <Plug>RgRawSearch
 vmap <Leader>/ <Plug>RgRawVisualSelection
 nmap <Leader>* <Plug>RgRawWordUnderCursor
-
-" Zoom
-noremap <leader>zi <c-w>_ \| <c-w>\|
-noremap <leader>zo <c-w>=
 
 "*****************************************************************************
 " coc.vim
@@ -164,22 +107,6 @@ noremap <leader>zo <c-w>=
 " noremap <Leader>gb :Gblame<CR>
 " noremap <Leader>gd :Gvdiff<CR>
 " noremap <Leader>gr :Gremove<CR>
-
-"*****************************************************************************
-" NERDTree
-"*****************************************************************************
-nnoremap <leader>tf :NERDTreeFind<CR>
-noremap <leader>tt :NERDTreeToggle<CR>
-
-"*****************************************************************************
-" Config files
-"*****************************************************************************
-
-nnoremap <leader>vi :vsplit $HOME/.config/nvim/init.vim<cr>
-nnoremap <leader>vm :vsplit $HOME/.config/nvim/mapping.vim<cr>
-nnoremap <leader>vs :vsplit $HOME/.config/nvim/settings.vim<cr>
-nnoremap <leader>vp :vsplit $HOME/.config/nvim/plugins.vim<cr>
-nnoremap <leader>vr :source $MYVIMRC<cr>
 
 "*****************************************************************************
 " OmniSharp
