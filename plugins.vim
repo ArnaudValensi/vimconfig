@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 " Plug 'scrooloose/nerdtree'
