@@ -96,13 +96,10 @@ let g:which_key_map['w'] = {
       \ '?' : ['Windows'    , 'fzf window'],
       \ }
 
-let g:which_key_map.s = {
-      \ 'name' : '+find & replace' ,
-      \ 'b' : [':Farr --source=vimgrep'    , 'buffer'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+let g:which_key_map.r = {
+      \ 'name' : '+replace' ,
+      \ 'p' : [':Farr --source=vimgrep' , 'in project (Far)'],
       \ }
-
-let g:which_key_map.r = { 'name' : '+replace' }
 
 nnoremap <Leader>rf :%s///g<Left><Left>
 let g:which_key_map.r.f = 'in file'
