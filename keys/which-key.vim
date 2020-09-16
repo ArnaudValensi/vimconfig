@@ -31,12 +31,11 @@ let g:which_key_map['/'] = 'rg raw in project'
 let g:which_key_map['.'] = [ ':e $MYVIMRC'       , 'open init' ]
 let g:which_key_map['p'] = [ '<C-^>'             , 'previous buffer' ]
 let g:which_key_map['q'] = [ 'q'                 , 'quit' ]
-let g:which_key_map['r'] = [ ':RnvimrToggle'     , 'ranger' ]
 
 " Group mappings
 
 let g:which_key_map.f = {
-      \ 'name' : '+search'  ,
+      \ 'name' : '+find'  ,
       \ '/' : [':History/'  , 'history'],
       \ ';' : [':Commands'  , 'commands'],
       \ 'a' : [':Ag'        , 'text ag'],
@@ -103,9 +102,21 @@ let g:which_key_map.s = {
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
       \ }
 
+let g:which_key_map.r = { 'name' : '+replace' }
+
+nnoremap <Leader>rf :%s///g<Left><Left>
+let g:which_key_map.r.f = 'in file'
+
+xnoremap <Leader>rs :s///g<Left><Left>
+let g:which_key_map.r.s = 'in selection'
+
+nnoremap <Leader>re :.,$s///g<Left><Left>
+let g:which_key_map.r.e = 'to end of file'
+
 let g:which_key_map.u = {
       \ 'name' : '+utils' ,
       \ 'n' : [':NV!'    , 'notational-fzf'],
+      \ 'r' : [':RnvimrToggle'    , 'ranger'],
       \ }
 
 " " g is for git
