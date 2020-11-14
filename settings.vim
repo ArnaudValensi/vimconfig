@@ -3,6 +3,7 @@
 set nocompatible
 
 let g:node_host_prog = expand("~/.fnm/node-versions/v12.18.3/installation/lib/node_modules/neovim/bin/cli.js")
+let g:coc_node_path = expand("~/.fnm/node-versions/v12.18.3/installation/bin/node")
 
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
