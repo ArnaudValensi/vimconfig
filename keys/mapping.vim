@@ -38,11 +38,6 @@ nnoremap <silent> [l :lprevious<cr>
 nnoremap <silent> ]L :llast<cr>
 nnoremap <silent> [L :lfirst<cr>
 
-" Stamp
-" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
-" nnoremap S ciw<C-r>0<Esc>
-" vnoremap S "_d"0P
-
 " Delete a char right to the cursor.
 inoremap <C-D> <C-O>x
 

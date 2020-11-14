@@ -29,7 +29,6 @@ let g:which_key_map[' '] = [ ':Buffers'          , 'list buffers' ]
 let g:which_key_map['*'] = 'rg raw under cursor'
 let g:which_key_map['/'] = 'rg raw in project'
 let g:which_key_map['.'] = [ ':e $MYVIMRC'       , 'open init' ]
-let g:which_key_map['p'] = [ '<C-^>'             , 'previous buffer' ]
 let g:which_key_map['q'] = [ 'q'                 , 'quit' ]
 
 " Group mappings
@@ -139,6 +138,18 @@ let g:which_key_map.r = {
       \ 'P' : [':Farr --source=vimgrep' , 'in project (Far)'],
       \ }
 
+" Stamp
+" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+" nnoremap S ciw<C-r>0<Esc>
+" vnoremap S "_d"0P
+
+" https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/11993928#11993928
+" nnoremap <leader>d "_d
+" xnoremap <leader>d "_d
+" xnoremap <leader>p "_dP
+let g:which_key_map.p = 'paste yank register ("0p)'
+noremap <leader>p "0p
+
 nnoremap <Leader>rf :%s///g<Left><Left>
 let g:which_key_map.r.f = 'in file'
 
@@ -156,6 +167,9 @@ let g:which_key_map.u = {
       \ 'n' : [':NV!'    , 'notational-fzf'],
       \ 'r' : [':RnvimrToggle'    , 'ranger'],
       \ }
+
+" let g:which_key_map['<tab>'] = 'previous buffer'
+nnoremap <leader><tab> <C-^>
 
 " " g is for git
 " let g:which_key_map.g = {
