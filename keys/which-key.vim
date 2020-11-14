@@ -136,7 +136,7 @@ let g:which_key_map['w'] = {
 
 let g:which_key_map.r = {
       \ 'name' : '+replace' ,
-      \ 'p' : [':Farr --source=vimgrep' , 'in project (Far)'],
+      \ 'P' : [':Farr --source=vimgrep' , 'in project (Far)'],
       \ }
 
 nnoremap <Leader>rf :%s///g<Left><Left>
@@ -147,6 +147,9 @@ let g:which_key_map.r.s = 'in selection'
 
 nnoremap <Leader>re :.,$s///g<Left><Left>
 let g:which_key_map.r.e = 'to end of file'
+
+nnoremap <leader>rp :CocSearch <C-R>=expand("<cword>")<CR><CR>
+let g:which_key_map.r.p = 'in project (CocSearch)'
 
 let g:which_key_map.u = {
       \ 'name' : '+utils' ,
