@@ -103,6 +103,13 @@ augroup Misc
   autocmd FileType cs setlocal shiftwidth=4 softtabstop=4 expandtab
 augroup END
 
+" trigger `autoread` when files changes on disk
+set autoread
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" notification after file change
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 "*****************************************************************************
 " Quickfix list
 "*****************************************************************************
