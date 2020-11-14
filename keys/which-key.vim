@@ -62,7 +62,7 @@ let g:which_key_map.c = {
       \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
       \ 'r' : ['<Plug>(coc-rename)'                  , 'rename (rr)'],
       \ 'R' : ['<Plug>(coc-references)'              , 'references (gr)'],
-      \ 's' : [':CocList -I symbols'                 , 'references'],
+      \ 's' : [':CocList -I symbols'                 , 'search symbols'],
       \ 'S' : [':CocList snippets'                   , 'snippets'],
       \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition (gy)'],
       \ 'u' : [':CocListResume'                      , 'resume list'],
