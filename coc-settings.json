@@ -9,5 +9,11 @@
     "javascriptreact",
     "json"
   ],
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "languageserver": {
+    "zls": {
+      "command": "/Users/arnaud/dev/zig/zls/zig-cache/bin/zls",
+      "filetypes": ["zig"]
+    }
+  }
 }
