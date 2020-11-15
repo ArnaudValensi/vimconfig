@@ -33,6 +33,14 @@ let g:which_key_map['q'] = [ 'q'                 , 'quit' ]
 
 " Group mappings
 
+let g:which_key_map.b = {
+      \ 'name' : '+buffer' ,
+      \ 'd' : [':bdelete'  , 'delete buffer'],
+      \ 'l' : ['Buffers'   , 'list buffers'],
+      \ 'o' : [':BufOnly'  , 'delete other'],
+      \ 'p' : ['<C-^>'     , 'previous'],
+      \ }
+
 let g:which_key_map.c = {
       \ 'name' : '+coc' ,
       \ '.' : [':CocConfig'                          , 'config'],
@@ -99,13 +107,36 @@ let g:which_key_map.f = {
       \ 'y' : [':Filetypes' , 'file types'],
       \ }
 
-let g:which_key_map.b = {
-      \ 'name' : '+buffer' ,
-      \ 'd' : [':bdelete'  , 'delete buffer'],
-      \ 'l' : ['Buffers'   , 'list buffers'],
-      \ 'o' : [':BufOnly'  , 'delete other'],
-      \ 'p' : ['<C-^>'     , 'previous'],
+let g:which_key_map.m = [':make', 'make']
+
+" Stamp
+" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+" nnoremap S ciw<C-r>0<Esc>
+" vnoremap S "_d"0P
+
+" https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/11993928#11993928
+" nnoremap <leader>d "_d
+" xnoremap <leader>d "_d
+" xnoremap <leader>p "_dP
+let g:which_key_map.p = 'paste yank register ("0p)'
+noremap <leader>p "0p
+
+let g:which_key_map.r = {
+      \ 'name' : '+replace' ,
+      \ 'P' : [':Farr --source=vimgrep' , 'in project (Far)'],
       \ }
+
+nnoremap <Leader>rf :%s///g<Left><Left>
+let g:which_key_map.r.f = 'in file'
+
+xnoremap <Leader>rs :s///g<Left><Left>
+let g:which_key_map.r.s = 'in selection'
+
+nnoremap <Leader>re :.,$s///g<Left><Left>
+let g:which_key_map.r.e = 'to end of file'
+
+nnoremap <leader>rp :CocSearch <C-R>=expand("<cword>")<CR><CR>
+let g:which_key_map.r.p = 'in project (CocSearch)'
 
 let g:which_key_map.t = {
       \ 'name' : '+tabline'   ,
@@ -138,37 +169,6 @@ let g:which_key_map['w'] = {
       \ 'v' : ['<C-W>v'     , 'split window below'],
       \ '?' : ['Windows'    , 'fzf window'],
       \ }
-
-let g:which_key_map.r = {
-      \ 'name' : '+replace' ,
-      \ 'P' : [':Farr --source=vimgrep' , 'in project (Far)'],
-      \ }
-
-" Stamp
-" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
-" nnoremap S ciw<C-r>0<Esc>
-" vnoremap S "_d"0P
-
-" https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/11993928#11993928
-" nnoremap <leader>d "_d
-" xnoremap <leader>d "_d
-" xnoremap <leader>p "_dP
-let g:which_key_map.p = 'paste yank register ("0p)'
-noremap <leader>p "0p
-
-let g:which_key_map.m = [':make', 'make']
-
-nnoremap <Leader>rf :%s///g<Left><Left>
-let g:which_key_map.r.f = 'in file'
-
-xnoremap <Leader>rs :s///g<Left><Left>
-let g:which_key_map.r.s = 'in selection'
-
-nnoremap <Leader>re :.,$s///g<Left><Left>
-let g:which_key_map.r.e = 'to end of file'
-
-nnoremap <leader>rp :CocSearch <C-R>=expand("<cword>")<CR><CR>
-let g:which_key_map.r.p = 'in project (CocSearch)'
 
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>
