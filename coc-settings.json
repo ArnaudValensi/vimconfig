@@ -1,7 +1,10 @@
 {
   "typescript.suggestionActions.enabled": false,
   "javascript.suggestionActions.enabled": false,
-  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snippets"],
+  "snippets.textmateSnippetsRoots": [
+    "~/.config/nvim/snippets",
+    "/Users/arnaud/Library/Application Support/Code/User/snippets"
+  ],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
