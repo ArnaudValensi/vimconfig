@@ -36,6 +36,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'brooth/far.vim'
 Plug 'alok/notational-fzf-vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-peekaboo'
 
 " Auto pair
 " Alternatives:
