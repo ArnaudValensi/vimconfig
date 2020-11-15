@@ -115,6 +115,12 @@ let g:which_key_map.t = {
       \ 'p' : [':tabprevious' , 'prev tab'],
       \ }
 
+let g:which_key_map.u = {
+      \ 'name' : '+utils' ,
+      \ 'n' : [':NV!'    , 'notational-fzf'],
+      \ 'r' : [':RnvimrToggle'    , 'ranger'],
+      \ }
+
 let g:which_key_map['w'] = {
       \ 'name' : '+windows' ,
       \ 'w' : ['<C-W>w'     , 'other window'],
@@ -150,6 +156,8 @@ let g:which_key_map.r = {
 let g:which_key_map.p = 'paste yank register ("0p)'
 noremap <leader>p "0p
 
+let g:which_key_map.m = [':make', 'make']
+
 nnoremap <Leader>rf :%s///g<Left><Left>
 let g:which_key_map.r.f = 'in file'
 
@@ -161,12 +169,6 @@ let g:which_key_map.r.e = 'to end of file'
 
 nnoremap <leader>rp :CocSearch <C-R>=expand("<cword>")<CR><CR>
 let g:which_key_map.r.p = 'in project (CocSearch)'
-
-let g:which_key_map.u = {
-      \ 'name' : '+utils' ,
-      \ 'n' : [':NV!'    , 'notational-fzf'],
-      \ 'r' : [':RnvimrToggle'    , 'ranger'],
-      \ }
 
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>

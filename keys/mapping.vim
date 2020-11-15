@@ -10,7 +10,7 @@ vnoremap . :normal .<CR>
 
 " To find, do * or # for backward
 " Unhighlight by pusing escape keys twice.
-nnoremap <esc><esc> :nohlsearch<cr>
+nnoremap <silent> <esc><esc> :nohlsearch<cr>
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -46,3 +46,5 @@ nmap <Leader>/ <Plug>RgRawSearch
 vmap <Leader>/ <Plug>RgRawVisualSelection
 nmap <Leader>* <Plug>RgRawWordUnderCursor
 
+noremap <silent> <C-s> :w<CR>
+inoremap <silent> <C-s> <ESC>:w<CR>a
