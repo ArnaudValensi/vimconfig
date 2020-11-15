@@ -107,6 +107,13 @@ let g:which_key_map.f = {
       \ 'y' : [':Filetypes' , 'file types'],
       \ }
 
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 'd' : [':GitGutterPreviewHunk'  , 'previous diff'],
+      \ 'n' : [':GitGutterNextHunk'  , 'next diff'],
+      \ 'p' : [':GitGutterPrevHunk'  , 'previous diff'],
+      \ }
+
 let g:which_key_map.m = [':make', 'make']
 
 " Stamp
