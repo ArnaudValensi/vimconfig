@@ -37,6 +37,7 @@ Plug 'brooth/far.vim'
 Plug 'alok/notational-fzf-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'AndrewRadev/tagalong.vim'
 
 " Auto pair
 " Alternatives:
