@@ -13,3 +13,5 @@ source ~/.config/nvim/plug-config/notational-fzf.vim
 source ~/.config/nvim/plug-config/coc.vim
 " source ~/.config/nvim/plug-config/omnisharp.vim
 " source ~/.config/nvim/plug-config/c.vim
+source ~/.config/nvim/plug-config/emmet.vim
+source ~/.config/nvim/plug-config/css.vim

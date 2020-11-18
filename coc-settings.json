@@ -10,7 +10,9 @@
     "typescript",
     "typescriptreact",
     "javascriptreact",
-    "json"
+    "json",
+    "scss",
+    "css"
   ],
   "prettier.eslintIntegration": true,
   "languageserver": {

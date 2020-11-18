@@ -38,6 +38,7 @@ Plug 'alok/notational-fzf-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'AndrewRadev/tagalong.vim'
+Plug 'mattn/emmet-vim'
 
 " Auto pair
 " Alternatives:
