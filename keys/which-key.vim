@@ -26,6 +26,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map[' '] = [ ':Buffers'          , 'list buffers' ]
+let g:which_key_map['d'] = [ ':Bd'               , 'list buffers delete' ]
 let g:which_key_map['*'] = 'rg raw under cursor'
 let g:which_key_map['/'] = 'rg raw in project'
 let g:which_key_map['.'] = [ ':e $MYVIMRC'       , 'open init' ]
