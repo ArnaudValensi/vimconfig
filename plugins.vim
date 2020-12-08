@@ -36,7 +36,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'brooth/far.vim'
 Plug 'alok/notational-fzf-vim'
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/vim-peekaboo'
+" Plug 'junegunn/vim-peekaboo'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'mattn/emmet-vim'
 
