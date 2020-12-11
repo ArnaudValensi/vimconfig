@@ -43,6 +43,8 @@ set signcolumn=yes         " Always show signcolumns.
 set clipboard=unnamedplus  " Share the default register with the clipboard.
 set mouse=a                " Enable your mouse
 
+set foldlevel=99           " Default fold level.
+
 set list                   " Show non-printable characters.
 if has('multi_byte') && &encoding ==# 'utf-8'
   let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:~'
