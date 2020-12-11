@@ -58,13 +58,22 @@ if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
 endif
 
 " Backup files.
-set backup
-set backupdir   =$HOME/.vim/files/backup/
-set backupext   =-vimbackup
-set backupskip  =
+" set backup
+" set backupdir   =$HOME/.vim/files/backup/
+" set backupext   =-vimbackup
+" set backupskip  =
+
+" coc: Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
 " Swap files.
-set directory   =$HOME/.vim/files/swap/
+set directory   =$HOME/.vim/files/swap//
 set updatecount =100
+" Add :DiffOrig command to diff with swap.
+command DiffOrig vert new | set buftype=nofile | read ++edit # | 0d_
+  \ | diffthis | wincmd p | diffthis
+
 " Undo files.
 set undofile
 set undodir     =$HOME/.vim/files/undo/
