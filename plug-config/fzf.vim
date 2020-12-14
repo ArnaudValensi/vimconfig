@@ -84,3 +84,19 @@ function! s:delete_buffers()
 endfunction
 
 command! Bd call s:delete_buffers()
+
+" Dracula colors
+let g:fzf_colors = {
+\ 'fg': ['fg', 'Normal'],
+\ 'bg': ['bg', 'Normal'],
+\ 'hl': ['fg', 'Search'],
+\ 'fg+': ['fg', 'Normal'],
+\ 'bg+': ['bg', 'CursorLine'],
+\ 'hl+': ['fg', 'DraculaOrange'],
+\ 'info': ['fg', 'DraculaPurple'],
+\ 'border': ['fg', 'Ignore'],
+\ 'prompt': ['fg', 'DraculaGreen'],
+\ 'pointer': ['fg', 'Exception'],
+\ 'marker': ['fg', 'Keyword'],
+\ 'spinner': ['fg', 'Label'],
+\ 'header': ['fg', 'Comment'] }
