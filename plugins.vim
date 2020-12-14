@@ -10,6 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jesseleite/vim-agriculture'
 Plug 'tpope/vim-dispatch'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 " Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}

@@ -35,6 +35,8 @@ command! -bang -nargs=? -complete=dir Files
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
+let g:coc_fzf_preview = 'right:50%'
+
 " Delete buffers (:BD)
 " https://github.com/junegunn/fzf.vim/pull/733
 function! s:format_buffer(b)
