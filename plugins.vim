@@ -16,7 +16,8 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 " Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
+Plug 'shumphrey/fugitive-gitlab.vim'
 " Plug 'metakirby5/codi.vim'
 " Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
@@ -36,6 +37,8 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'liuchengxu/vim-which-key'
 Plug 'brooth/far.vim'
 Plug 'alok/notational-fzf-vim'
+Plug 'tpope/vim-eunuch'
+Plug 'rust-lang/rust.vim'
 " Plug 'junegunn/goyo.vim'
 " Plug 'AndrewRadev/tagalong.vim'
 " Plug 'mattn/emmet-vim'

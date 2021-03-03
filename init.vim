@@ -16,3 +16,4 @@ source ~/.config/nvim/plug-config/coc.vim
 " source ~/.config/nvim/plug-config/c.vim
 " source ~/.config/nvim/plug-config/emmet.vim
 source ~/.config/nvim/plug-config/css.vim
+source ~/.config/nvim/plug-config/rust.vim

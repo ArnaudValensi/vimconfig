@@ -178,6 +178,17 @@ let g:which_key_map['w'] = {
       \ '?' : ['Windows'    , 'fzf window'],
       \ }
 
+let g:which_key_map.u.f = {
+      \ 'name' : '+copy file path' ,
+      \ }
+
+nnoremap <Leader>ufp :let @+ = expand("%:p")<cr>
+nnoremap <Leader>ufd :let @+ = expand("%:h")<cr>
+nnoremap <Leader>uff :let @+ = expand("%:t")<cr>
+let g:which_key_map.u.f.p = 'full'
+let g:which_key_map.u.f.d = 'directory'
+let g:which_key_map.u.f.f = 'file'
+
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>
 
