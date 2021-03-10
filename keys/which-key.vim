@@ -34,9 +34,13 @@ let g:which_key_map['q'] = [ 'q'                 , 'quit' ]
 
 " Group mappings
 
+" Add the following with the word under the cursor:
+" console.log('world:', JSON.stringify(world, null, 2));
+nmap <leader>al yiwoconsole.log('": ', JSON.stringify(", null, 2));
+
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
-      \ 'd' : [':bdelete'  , 'delete buffer'],
+      \ 'd' : [':bp | bd #'  , 'delete buffer'],
       \ 'l' : ['Buffers'   , 'list buffers'],
       \ 'o' : [':BufOnly'  , 'delete other'],
       \ 'p' : ['<C-^>'     , 'previous'],
