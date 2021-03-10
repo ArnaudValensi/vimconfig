@@ -34,10 +34,6 @@ let g:which_key_map['q'] = [ 'q'                 , 'quit' ]
 
 " Group mappings
 
-" Add the following with the word under the cursor:
-" console.log('world:', JSON.stringify(world, null, 2));
-nmap <leader>al yiwoconsole.log('": ', JSON.stringify(", null, 2));
-
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ 'd' : [':bp | bd #'  , 'delete buffer'],
@@ -187,11 +183,21 @@ let g:which_key_map.u.f = {
       \ }
 
 nnoremap <Leader>ufp :let @+ = expand("%:p")<cr>
-nnoremap <Leader>ufd :let @+ = expand("%:h")<cr>
-nnoremap <Leader>uff :let @+ = expand("%:t")<cr>
 let g:which_key_map.u.f.p = 'full'
+
+nnoremap <Leader>ufd :let @+ = expand("%:h")<cr>
 let g:which_key_map.u.f.d = 'directory'
+
+nnoremap <Leader>uff :let @+ = expand("%:t")<cr>
 let g:which_key_map.u.f.f = 'file'
+
+" Add the following with the word under the cursor:
+" console.log('world:', JSON.stringify(world, null, 2));
+nmap <leader>ul yiwoconsole.log('": ', JSON.stringify(", null, 2));
+let g:which_key_map.u.l = 'console.log word at cursor'
+
+nmap <leader>uc :%s/^ *console\.log(.*$\n//gc<cr>
+let g:which_key_map.u.l = 'clear console.log'
 
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>
