@@ -53,6 +53,9 @@ else
 endif
 
 " create directory if needed
+if !isdirectory($HOME.'/.vim') && exists('*mkdir')
+  call mkdir($HOME.'/.vim')
+endif
 if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
   call mkdir($HOME.'/.vim/files')
 endif
