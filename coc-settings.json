@@ -3,7 +3,6 @@
   "javascript.suggestionActions.enabled": true,
   "snippets.textmateSnippetsRoots": [
     "~/.config/nvim/snippets",
-    "/Users/arnaud/Library/Application Support/Code/User/snippets"
   ],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",

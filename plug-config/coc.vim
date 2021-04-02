@@ -1,3 +1,5 @@
+let g:coc_global_extensions = ['coc-snippets', 'coc-prettier', 'coc-eslint', 'coc-emmet', 'coc-tsserver', 'coc-json', 'coc-css']
+
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
