@@ -11,25 +11,11 @@ Plug 'jesseleite/vim-agriculture'
 Plug 'tpope/vim-dispatch'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-fugitive'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-rhubarb'
-" Plug 'metakirby5/codi.vim'
-" Plug 'ap/vim-css-color'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/BufOnly.vim'
-" Plug 'w0rp/ale'
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
-" Plug 'ycm-core/YouCompleteMe'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'bling/vim-bufferline'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ziglang/zig.vim'
@@ -41,19 +27,5 @@ Plug 'alok/notational-fzf-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'rust-lang/rust.vim'
 Plug 'icatalina/vim-case-change'
-" Plug 'junegunn/goyo.vim'
-" Plug 'AndrewRadev/tagalong.vim'
-" Plug 'mattn/emmet-vim'
-
-" Auto pair
-" Alternatives:
-"  - https://github.com/Raimondi/delimitMate
-"  - https://github.com/jiangmiao/auto-pairs
-" Plug 'cohama/lexima.vim'
-" Plug 'raimondi/delimitmate'
-" Plug 'lyuts/vim-rtags'
-"
-" Best one:
-" Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
