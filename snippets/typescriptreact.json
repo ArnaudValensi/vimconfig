@@ -44,12 +44,27 @@
   },
   "Typescript React Function Component": {
     "prefix": "arc",
-    "body": ["const $1: React.FC<{$2}> = ({$3}) => {", "    return ($4);", "}"],
+    "body": ["function $1(): JSX.Element {", "  return <div>$2</div>", "}"],
     "description": "Typescript React Function Component"
+  },
+  "useState": {
+    "prefix": "aus",
+    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
+    "description": "React useState() hook"
+  },
+  "useMemo": {
+    "prefix": "aum",
+    "body": ["const ${1} = useMemo(() => {", "  ${2}", "}, []);$0"],
+    "description": "React useMemo() hook"
+  },
+  "useEffect": {
+    "prefix": "aue",
+    "body": ["useEffect(() => {", "  ${2}", "}, []);$0"],
+    "description": "React useEffect() hook"
   },
   "className": {
     "prefix": "cn",
-    "body": ["className={styles.$1}$2"],
+    "body": ["className={classes.$1}$2"],
     "description": "className"
   }
 }
