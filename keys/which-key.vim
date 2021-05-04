@@ -201,6 +201,9 @@ let g:which_key_map.u.l = 'console.log word at cursor'
 nmap <leader>uc :%s/^ *console\.log(.*$\n//gc<cr>
 let g:which_key_map.u.c = 'clear console.log'
 
+nmap <leader>uj ^vt::!camelcase<cr>f a'<esc>f;s',<esc>^
+let g:which_key_map.u.j = 'to JSS'
+
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>
 
