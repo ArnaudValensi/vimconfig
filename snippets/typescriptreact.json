@@ -574,7 +574,7 @@
   },
   "margin-top:|": {
     "prefix": "jmt",
-    "body": "marginTop: '$0',"
+    "body": "marginTop: '$0px',"
   },
   "margin-top:auto": {
     "prefix": "jmt:a",
@@ -582,7 +582,7 @@
   },
   "margin-right:|": {
     "prefix": "jmr",
-    "body": "marginRight: '$0',"
+    "body": "marginRight: '$0px',"
   },
   "margin-right:auto": {
     "prefix": "jmr:a",
@@ -590,7 +590,7 @@
   },
   "margin-bottom:|": {
     "prefix": "jmb",
-    "body": "marginBottom: '$0',"
+    "body": "marginBottom: '$0px',"
   },
   "margin-bottom:auto": {
     "prefix": "jmb:a",
@@ -598,7 +598,7 @@
   },
   "margin-left:|": {
     "prefix": "jml",
-    "body": "marginLeft: '$0',"
+    "body": "marginLeft: '$0px',"
   },
   "margin-left:auto": {
     "prefix": "jml:a",
@@ -610,23 +610,23 @@
   },
   "padding-top:|": {
     "prefix": "jpt",
-    "body": "paddingTop: '$0',"
+    "body": "paddingTop: '$0px',"
   },
   "padding-right:|": {
     "prefix": "jpr",
-    "body": "paddingRight: '$0',"
+    "body": "paddingRight: '$0px',"
   },
   "padding-bottom:|": {
     "prefix": "jpb",
-    "body": "paddingBottom: '$0',"
+    "body": "paddingBottom: '$0px',"
   },
   "padding-left:|": {
     "prefix": "jpl",
-    "body": "paddingLeft: '$0',"
+    "body": "paddingLeft: '$0px',"
   },
   "width:|": {
     "prefix": "jw",
-    "body": "width: '$0',"
+    "body": "width: '$0px',"
   },
   "width:auto": {
     "prefix": "jw:a",
@@ -634,7 +634,7 @@
   },
   "height:|": {
     "prefix": "jh",
-    "body": "height: '$0',"
+    "body": "height: '$0px',"
   },
   "height:auto": {
     "prefix": "jh:a",
@@ -2418,11 +2418,11 @@
   },
   "flex-grow:|": {
     "prefix": "jfxg",
-    "body": "flexGrow: '$0',"
+    "body": "flexGrow: $0,"
   },
   "flex-shrink:|": {
     "prefix": "jfxsh",
-    "body": "flexShrink: '$0',"
+    "body": "flexShrink: $0,"
   },
   "flex-basis:|": {
     "prefix": "jfxb",
