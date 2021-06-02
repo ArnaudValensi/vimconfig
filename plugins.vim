@@ -27,5 +27,6 @@ Plug 'alok/notational-fzf-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'rust-lang/rust.vim'
 Plug 'icatalina/vim-case-change'
+Plug 'mattn/emmet-vim'
 
 call plug#end()

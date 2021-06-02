@@ -2,7 +2,7 @@
   "typescript.suggestionActions.enabled": true,
   "javascript.suggestionActions.enabled": true,
   "snippets.textmateSnippetsRoots": [
-    "~/.config/nvim/snippets",
+    "~/.config/nvim/snippets"
   ],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
