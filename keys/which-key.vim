@@ -192,6 +192,9 @@ let g:which_key_map.u.f.d = 'directory'
 nnoremap <Leader>uff :let @+ = expand("%:t")<cr>
 let g:which_key_map.u.f.f = 'file'
 
+vmap <leader>us <Plug>VSurround<div>
+let g:which_key_map.u.s = 'surround with div'
+
 " Add the following with the word under the cursor:
 " console.log('world:', JSON.stringify(world, null, 2));
 nnoremap <leader>ul yiwoconsole.log('": ', JSON.stringify(", null, 2));
