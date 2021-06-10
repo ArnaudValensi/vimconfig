@@ -118,17 +118,18 @@ let g:which_key_map.g = {
 
 let g:which_key_map.m = [':make', 'make']
 
-" Stamp
-" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
-" nnoremap S ciw<C-r>0<Esc>
-" vnoremap S "_d"0P
-
 " https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/11993928#11993928
 " nnoremap <leader>d "_d
 " xnoremap <leader>d "_d
 " xnoremap <leader>p "_dP
 let g:which_key_map.p = 'paste yank register ("0p)'
 noremap <leader>p "0p
+
+" Stamp
+" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+let g:which_key_map.s = 'stamp yank register (ciw<C-r>0<Esc>"0p)'
+nnoremap <leader>s ciw<C-r>0<Esc>
+vnoremap <leader>s "_d"0P
 
 let g:which_key_map.r = {
       \ 'name' : '+replace' ,
