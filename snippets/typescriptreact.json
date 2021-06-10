@@ -47,6 +47,26 @@
     "body": ["function $1(): JSX.Element {", "  return <div>$2</div>", "}"],
     "description": "Typescript React Function Component"
   },
+  "Typescript React Function Component Full": {
+    "prefix": "arcf",
+    "body": [
+      "import React from 'react';",
+      "import { makeStyles } from '@material-ui/core/styles';",
+      "",
+      "const useStyles = makeStyles((theme) => ({",
+      "  root: {",
+      "    backgroundColor: 'pink',",
+      "  },",
+      "}));",
+      "",
+      "export function $1(): JSX.Element {",
+      "  const classes = useStyles();",
+      "",
+      "  return <div className={classes.root}>$1$0</div>;",
+      "}"
+    ],
+    "description": "Typescript React Function Component Full"
+  },
   "useState": {
     "prefix": "aus",
     "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
