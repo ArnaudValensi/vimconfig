@@ -29,4 +29,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'icatalina/vim-case-change'
 Plug 'mattn/emmet-vim'
 
+" Harpoon
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'ThePrimeagen/harpoon'
+
 call plug#end()

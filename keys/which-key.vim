@@ -25,7 +25,6 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-let g:which_key_map[' '] = [ ':Buffers'          , 'list buffers' ]
 let g:which_key_map['d'] = [ ':Bd'               , 'list buffers delete' ]
 let g:which_key_map['*'] = 'rg raw under cursor'
 let g:which_key_map['/'] = 'rg raw in project'
@@ -115,6 +114,19 @@ let g:which_key_map.g = {
       \ 'n' : [':GitGutterNextHunk'  , 'next diff'],
       \ 'p' : [':GitGutterPrevHunk'  , 'previous diff'],
       \ }
+
+nnoremap <leader><space> :lua require("harpoon.ui").toggle_quick_menu()<cr>
+nnoremap <leader>h :lua require("harpoon.mark").add_file()<cr>
+nnoremap <leader>j :lua require("harpoon.ui").nav_file(1)<cr>
+nnoremap <leader>k :lua require("harpoon.ui").nav_file(2)<cr>
+nnoremap <leader>l :lua require("harpoon.ui").nav_file(3)<cr>
+nnoremap <leader>; :lua require("harpoon.ui").nav_file(4)<cr>
+let g:which_key_map[' '] = 'harpoon toggle'
+let g:which_key_map['h'] = 'harpoon add file'
+let g:which_key_map['j'] = 'harpoon 1'
+let g:which_key_map['k'] = 'harpoon 2'
+let g:which_key_map['l'] = 'harpoon 3'
+let g:which_key_map[';'] = 'harpoon 4'
 
 let g:which_key_map.m = [':make', 'make']
 
