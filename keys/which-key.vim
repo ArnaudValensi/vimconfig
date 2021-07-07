@@ -143,6 +143,10 @@ let g:which_key_map.s = 'stamp yank register (ciw<C-r>0<Esc>"0p)'
 nnoremap <leader>s ciw<C-r>0<Esc>
 vnoremap <leader>s "_d"0P
 
+" Yank in word
+let g:which_key_map.y = 'yank in word'
+nnoremap <leader>y yiw
+
 let g:which_key_map.r = {
       \ 'name' : '+replace' ,
       \ 'P' : [':Farr --source=vimgrep' , 'in project (Far)'],
