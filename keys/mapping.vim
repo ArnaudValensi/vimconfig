@@ -53,3 +53,6 @@ nmap <Leader>* <Plug>RgRawWordUnderCursor
 
 noremap <silent> <C-s> :w<CR>
 inoremap <silent> <C-s> <ESC>:w<CR>a
+
+" Escape from terminal insert mode
+tnoremap <leader><Esc> <C-\><C-n>
