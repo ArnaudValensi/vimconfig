@@ -18,6 +18,12 @@
     "zls": {
       "command": "/Users/arnaud/dev/zig/zls/zig-cache/bin/zls",
       "filetypes": ["zig"]
-    }
-  }
+    },
+    // "clangd": {
+    //   "command": "clangd",
+    //   "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+    //   "filetypes": ["c", "cc", "cpp", "c++"]
+    // }
+  },
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }

@@ -137,3 +137,25 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+fun! s:CppHeaderSource()
+  let extension = expand('%:e')
+  echo extension
+
+  if extension == "cpp"
+    :only
+    :vsplit
+    :wincmd h
+    :CocCommand clangd.switchSourceHeader
+  elseif extension == "h"
+    :only
+    :CocCommand clangd.switchSourceHeader vsplit
+    :sleep 100m
+    :wincmd h
+  endif
+
+endfun
+command! CppHeaderSource call s:CppHeaderSource()
+
+nnoremap <leader>o :CocCommand clangd.switchSourceHeader<cr>
+nnoremap <leader>O :CppHeaderSource<cr>
+
