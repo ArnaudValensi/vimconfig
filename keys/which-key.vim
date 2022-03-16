@@ -128,7 +128,10 @@ let g:which_key_map['k'] = 'harpoon 2'
 let g:which_key_map['l'] = 'harpoon 3'
 let g:which_key_map[';'] = 'harpoon 4'
 
-let g:which_key_map.m = [':make', 'make']
+" let g:which_key_map.m = [':make', 'make']
+" nnoremap <leader>m :make<cr>
+nnoremap <silent> <leader>m :wa<cr>:make<cr>
+let g:which_key_map['m'] = 'make'
 
 " https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/11993928#11993928
 " nnoremap <leader>d "_d

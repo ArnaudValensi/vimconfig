@@ -16,9 +16,9 @@
   "prettier.eslintIntegration": true,
   "languageserver": {
     "zls": {
-      "command": "/Users/arnaud/dev/zig/zls/zig-cache/bin/zls",
+      "command": "~/zls/zls",
       "filetypes": ["zig"]
-    },
+    }
     // "clangd": {
     //   "command": "clangd",
     //   "rootPatterns": ["compile_flags.txt", "compile_commands.json"],

@@ -28,6 +28,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'rust-lang/rust.vim'
 Plug 'icatalina/vim-case-change'
 Plug 'mattn/emmet-vim'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'KabbAmine/zeavim.vim'
 
 " Harpoon
 Plug 'nvim-lua/plenary.nvim'
