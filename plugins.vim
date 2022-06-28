@@ -30,6 +30,7 @@ Plug 'icatalina/vim-case-change'
 Plug 'mattn/emmet-vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'KabbAmine/zeavim.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Harpoon
 Plug 'nvim-lua/plenary.nvim'

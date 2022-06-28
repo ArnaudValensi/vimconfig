@@ -18,3 +18,5 @@ source ~/.config/nvim/plug-config/coc.vim
 source ~/.config/nvim/plug-config/css.vim
 source ~/.config/nvim/plug-config/rust.vim
 " source ~/.config/nvim/plug-config/zeal.vim
+
+lua require('user.treesitter')
