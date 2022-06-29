@@ -102,6 +102,7 @@ language en_US.UTF-8
 set updatetime=100
 
 " Gui colors if running iTerm.
+" TODO: Check if it is Windows' Terminal or Kitty.
 if $TERM_PROGRAM =~ "iTerm"
   set termguicolors
 endif

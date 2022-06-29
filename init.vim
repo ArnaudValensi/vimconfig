@@ -20,3 +20,5 @@ source ~/.config/nvim/plug-config/rust.vim
 " source ~/.config/nvim/plug-config/zeal.vim
 
 lua require('user.treesitter')
+set termguicolors
+lua require'colorizer'.setup()

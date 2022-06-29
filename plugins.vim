@@ -31,6 +31,7 @@ Plug 'mattn/emmet-vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'KabbAmine/zeavim.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Harpoon
 Plug 'nvim-lua/plenary.nvim'
