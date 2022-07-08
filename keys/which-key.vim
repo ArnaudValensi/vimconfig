@@ -113,6 +113,7 @@ let g:which_key_map.g = {
       \ 'd' : [':GitGutterPreviewHunk'  , 'previous diff'],
       \ 'n' : [':GitGutterNextHunk'  , 'next diff'],
       \ 'p' : [':GitGutterPrevHunk'  , 'previous diff'],
+      \ 'h' : [':0Gclog'  , 'history of current file'],
       \ }
 
 nnoremap <leader><space> :lua require("harpoon.ui").toggle_quick_menu()<cr>
