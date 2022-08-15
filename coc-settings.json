@@ -13,7 +13,7 @@
     "scss",
     "css"
   ],
-  "prettier.eslintIntegration": true,
+  "eslint.autoFixOnSave": true,
   "languageserver": {
     "zls": {
       "command": "~/zls/zls",
