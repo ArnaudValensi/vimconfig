@@ -32,9 +32,15 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'KabbAmine/zeavim.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'norcalli/nvim-colorizer.lua'
+" Used by harpoon and telescope.
+Plug 'nvim-lua/plenary.nvim'
+" Used by telescope.
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+" Used by telescope.
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 " Harpoon
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
 

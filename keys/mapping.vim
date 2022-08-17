@@ -56,3 +56,5 @@ inoremap <silent> <C-s> <ESC>:wa<CR>a
 
 " Escape from terminal insert mode
 tnoremap <leader><Esc> <C-\><C-n>
+
+nnoremap <leader>% :source %<cr>

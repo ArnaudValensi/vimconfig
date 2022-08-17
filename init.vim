@@ -22,3 +22,8 @@ source ~/.config/nvim/plug-config/rust.vim
 lua require('user.treesitter')
 set termguicolors
 lua require'colorizer'.setup()
+
+" TODO: Move to a user.telescope file
+" https://github.com/nvim-telescope/telescope-fzf-native.nvim
+" https://github.com/nvim-telescope/telescope.nvim
+lua require('telescope').load_extension('fzf')
