@@ -159,3 +159,7 @@ augroup Quickfix
   autocmd QuickFixCmdPost    l* nested lwindow
 augroup END
 
+" augroup filetypedetect
+"   autocmd!
+"   autocmd BufRead,BufNewFile *.h setfiletype c
+" augroup END
