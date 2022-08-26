@@ -159,7 +159,8 @@ augroup Quickfix
   autocmd QuickFixCmdPost    l* nested lwindow
 augroup END
 
+let g:c_syntax_for_h = 1
 " augroup filetypedetect
 "   autocmd!
-"   autocmd BufRead,BufNewFile *.h setfiletype c
+"   autocmd BufRead,BufNewFile *.h setlocal filetype=c
 " augroup END
