@@ -23,10 +23,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Use alt + hjkl to resize windows.
-nnoremap <M-j> :resize -3<CR>
-nnoremap <M-k> :resize +3<CR>
-nnoremap <M-h> :vertical resize -3<CR>
-nnoremap <M-l> :vertical resize +3<CR>
+" nnoremap <M-j> :resize -3<CR>
+" nnoremap <M-k> :resize +3<CR>
+" nnoremap <M-h> :vertical resize -3<CR>
+" nnoremap <M-l> :vertical resize +3<CR>
 
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
