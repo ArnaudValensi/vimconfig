@@ -29,3 +29,5 @@ lua require'colorizer'.setup()
 lua require('telescope').load_extension('fzf')
 " To do fuzzy search
 " :Telescope grep_string search=
+
+lua require('telescope').load_extension('vim_bookmarks')

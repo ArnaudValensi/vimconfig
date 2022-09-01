@@ -159,8 +159,8 @@ let g:which_key_map[';'] = 'harpoon 4'
 
 " let g:which_key_map.m = [':make', 'make']
 " nnoremap <leader>m :make<cr>
-nnoremap <silent> <leader>m :wa<cr>:make<cr>
-let g:which_key_map['m'] = 'make'
+" nnoremap <silent> <leader>m :wa<cr>:make<cr>
+" let g:which_key_map['m'] = 'make'
 
 " https://stackoverflow.com/questions/11993851/how-to-delete-not-cut-in-vim/11993928#11993928
 " nnoremap <leader>d "_d
@@ -258,6 +258,18 @@ let g:which_key_map.u.j = 'to JSS'
 
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>
+
+let g:which_key_map.m = {
+      \ 'name' : '+marks' ,
+      \ 'a' : [':BookmarkAnnotate', 'annotate'],
+      \ 'b' : [':Telescope vim_bookmarks current_file', 'show in buffer'],
+      \ 'c' : [':BookmarkClear', 'clean in buffer'],
+      \ 'm' : [':BookmarkToggle', 'mark'],
+      \ 'n' : [':BookmarkNext', 'next'],
+      \ 'p' : [':BookmarkPrev', 'previous'],
+      \ 's' : [':Telescope vim_bookmarks all', 'show'],
+      \ 'x' : [':BookmarkClearAll', 'clean all'],
+      \ }
 
 " " g is for git
 " let g:which_key_map.g = {
