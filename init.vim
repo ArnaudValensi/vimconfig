@@ -19,6 +19,7 @@ source ~/.config/nvim/plug-config/css.vim
 source ~/.config/nvim/plug-config/rust.vim
 " source ~/.config/nvim/plug-config/zeal.vim
 source ~/.config/nvim/plug-config/vim-bookmarks.vim
+source ~/.config/nvim/plug-config/vim-easy-align.vim
 
 lua require('user.treesitter')
 set termguicolors
