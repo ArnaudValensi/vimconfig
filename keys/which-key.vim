@@ -29,7 +29,6 @@ let g:which_key_map['d'] = [ ':Bd'               , 'list buffers delete' ]
 let g:which_key_map['*'] = 'rg raw under cursor'
 let g:which_key_map['/'] = 'rg raw in project'
 let g:which_key_map['.'] = [ ':e $MYVIMRC'       , 'open init' ]
-let g:which_key_map['q'] = [ 'q'                 , 'quit' ]
 
 " Group mappings
 
@@ -108,6 +107,9 @@ let g:which_key_map.c = {
 "       \ 'y' : [':Filetypes' , 'file types'],
 "       \ }
 
+nnoremap <leader>fr <cmd>Telescope live_grep prompt_prefix=🔍<cr>
+
+" \ 'r' : [':Telescope live_grep prompt_prefix=🔍' , 'text rg'],
 let g:which_key_map.f = {
       \ 'name' : '+find'  ,
       \ '/' : [':History/'  , 'history'],
@@ -127,7 +129,6 @@ let g:which_key_map.f = {
       \ 'M' : [':Maps'      , 'normal maps'] ,
       \ 'p' : [':Helptags'  , 'help tags'] ,
       \ 'P' : [':Tags'      , 'project tags'],
-      \ 'r' : [':Telescope live_grep prompt_prefix=🔍' , 'text rg'],
       \ 's' : [':Snippets'  , 'snippets'],
       \ 'S' : [':Colors'    , 'color schemes'],
       \ 'R' : [':Rg!'       , 'text rg fullscreen'],
@@ -269,6 +270,12 @@ let g:which_key_map.m = {
       \ 'p' : [':BookmarkPrev', 'previous'],
       \ 's' : [':Telescope vim_bookmarks all', 'show'],
       \ 'x' : [':BookmarkClearAll', 'clean all'],
+      \ }
+
+let g:which_key_map.q = {
+      \ 'name' : '+quickfix' ,
+      \ 'q' : [':Telescope quickfix', 'quickfix'],
+      \ 'h' : [':Telescope quickfixhistory', 'history'],
       \ }
 
 " " g is for git
