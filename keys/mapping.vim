@@ -22,6 +22,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" nnoremap <C-W>l :vsplit<cr>
+" nnoremap <C-W>h :vsplit<cr>
+" nnoremap <C-W>j :split<cr>
+" nnoremap <C-W>k :split<cr>
+
 " Use alt + hjkl to resize windows.
 " nnoremap <M-j> :resize -3<CR>
 " nnoremap <M-k> :resize +3<CR>
