@@ -27,6 +27,16 @@ lua require'colorizer'.setup()
 " TODO: Move to a user.telescope file
 " https://github.com/nvim-telescope/telescope-fzf-native.nvim
 " https://github.com/nvim-telescope/telescope.nvim
+lua << EOF
+require('telescope').setup{
+  pickers = {
+    live_grep = {
+      push_cursor_on_edit = true,
+    }
+  }
+}
+EOF
+
 lua require('telescope').load_extension('fzf')
 " To do fuzzy search
 " :Telescope grep_string search=
