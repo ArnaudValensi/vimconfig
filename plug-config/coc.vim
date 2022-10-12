@@ -1,4 +1,5 @@
 let g:coc_global_extensions = ['coc-snippets', 'coc-prettier', 'coc-eslint', 'coc-emmet', 'coc-tsserver', 'coc-json', 'coc-css']
+let g:coc_disable_transparent_cursor = 1
 
 " Some servers have issues with backup files, see #649.
 set nobackup

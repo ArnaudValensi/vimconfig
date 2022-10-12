@@ -30,6 +30,9 @@ let g:which_key_map['*'] = 'rg raw under cursor'
 let g:which_key_map['/'] = 'rg raw in project'
 let g:which_key_map['.'] = [ ':e $MYVIMRC'       , 'open init' ]
 
+nnoremap <leader><space> :Telescope buffers prompt_prefix=🔍<cr>
+let g:which_key_map[' '] = ['' , 'buffers']
+
 " Group mappings
 
 let g:which_key_map.b = {
@@ -107,9 +110,6 @@ let g:which_key_map.c = {
 "       \ 'y' : [':Filetypes' , 'file types'],
 "       \ }
 
-nnoremap <leader>fr <cmd>Telescope live_grep prompt_prefix=🔍<cr>
-
-" \ 'r' : [':Telescope live_grep prompt_prefix=🔍' , 'text rg'],
 let g:which_key_map.f = {
       \ 'name' : '+find'  ,
       \ '/' : [':History/'  , 'history'],
@@ -129,6 +129,7 @@ let g:which_key_map.f = {
       \ 'M' : [':Maps'      , 'normal maps'] ,
       \ 'p' : [':Helptags'  , 'help tags'] ,
       \ 'P' : [':Tags'      , 'project tags'],
+      \ 'r' : [':Telescope live_grep prompt_prefix=🔍' , 'text rg'],
       \ 's' : [':Snippets'  , 'snippets'],
       \ 'S' : [':Colors'    , 'color schemes'],
       \ 'R' : [':Rg!'       , 'text rg fullscreen'],
@@ -145,13 +146,13 @@ let g:which_key_map.g = {
       \ 'h' : [':0Gclog'  , 'history of current file'],
       \ }
 
-nnoremap <leader><space> :lua require("harpoon.ui").toggle_quick_menu()<cr>
+nnoremap <leader>H :lua require("harpoon.ui").toggle_quick_menu()<cr>
 nnoremap <leader>h :lua require("harpoon.mark").add_file()<cr>
 nnoremap <leader>j :lua require("harpoon.ui").nav_file(1)<cr>
 nnoremap <leader>k :lua require("harpoon.ui").nav_file(2)<cr>
 nnoremap <leader>l :lua require("harpoon.ui").nav_file(3)<cr>
 nnoremap <leader>; :lua require("harpoon.ui").nav_file(4)<cr>
-let g:which_key_map[' '] = 'harpoon toggle'
+let g:which_key_map['H'] = 'harpoon toggle'
 let g:which_key_map['h'] = 'harpoon add file'
 let g:which_key_map['j'] = 'harpoon 1'
 let g:which_key_map['k'] = 'harpoon 2'

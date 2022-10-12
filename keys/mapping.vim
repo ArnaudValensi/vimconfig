@@ -1,9 +1,9 @@
 let g:mapleader = "\<Space>"
 
 " TAB in general mode will move to text buffer
-nnoremap <silent> <TAB> :bnext<CR>
+" nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
-nnoremap <silent> <S-TAB> :bprevious<CR>
+" nnoremap <silent> <S-TAB> :bprevious<CR>
 
 " <tab> and <c-i> are sending the same key. To fix this, <c-i> is bound to
 " <c-n>i and iterm and alacritty are sending <c-n>i when doing <c-i>
