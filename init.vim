@@ -42,3 +42,5 @@ lua require('telescope').load_extension('fzf')
 " :Telescope grep_string search=
 
 lua require('telescope').load_extension('vim_bookmarks')
+
+lua require('leap').add_default_mappings()
