@@ -45,6 +45,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
 
-Plug 'ggandor/leap.nvim'
+" Plug 'ggandor/leap.nvim'
 
 call plug#end()

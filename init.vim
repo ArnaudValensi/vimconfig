@@ -43,4 +43,4 @@ lua require('telescope').load_extension('fzf')
 
 lua require('telescope').load_extension('vim_bookmarks')
 
-lua require('leap').add_default_mappings()
+" lua require('leap').add_default_mappings()
