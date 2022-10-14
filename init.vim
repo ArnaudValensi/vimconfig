@@ -33,6 +33,14 @@ require('telescope').setup{
   pickers = {
     live_grep = {
       push_cursor_on_edit = true,
+    },
+    buffers = {
+      show_all_buffers = true,
+      mappings = {
+        i = {
+          ["<c-d>"] = "delete_buffer",
+        }
+      }
     }
   }
 }
