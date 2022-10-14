@@ -22,6 +22,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nnoremap <S-H> 0
+nnoremap <S-L> $
+
 " nnoremap <C-W>l :vsplit<cr>
 " nnoremap <C-W>h :vsplit<cr>
 " nnoremap <C-W>j :split<cr>
