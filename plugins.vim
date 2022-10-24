@@ -49,4 +49,7 @@ Plug 'ThePrimeagen/harpoon'
 
 " Plug 'ggandor/leap.nvim'
 
+" Nelua
+Plug 'stefanos82/nelua.vim'
+
 call plug#end()
