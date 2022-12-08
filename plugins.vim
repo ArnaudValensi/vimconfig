@@ -52,4 +52,6 @@ Plug 'ThePrimeagen/harpoon'
 " Nelua
 Plug 'stefanos82/nelua.vim'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
