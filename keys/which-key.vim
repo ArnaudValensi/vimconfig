@@ -140,6 +140,7 @@ let g:which_key_map.f = {
 
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
+      \ 'c' : [':!git commit -a -m draft -n'  , 'commit draft'],
       \ 'd' : [':GitGutterPreviewHunk'  , 'previous diff'],
       \ 'n' : [':GitGutterNextHunk'  , 'next diff'],
       \ 'p' : [':GitGutterPrevHunk'  , 'previous diff'],
