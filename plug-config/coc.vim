@@ -190,7 +190,7 @@ fun! s:CppHeaderSource()
     :vsplit
     :wincmd h
     :CocCommand clangd.switchSourceHeader
-  elseif extension == "h"
+  elseif extension == "h" || extension == "hpp"
     :only
     :CocCommand clangd.switchSourceHeader vsplit
     :sleep 100m
