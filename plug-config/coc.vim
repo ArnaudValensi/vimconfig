@@ -186,12 +186,12 @@ fun! s:CppHeaderSource()
   echo extension
 
   if extension == "cpp"
-    :only
+    :silent only
     :vsplit
     :wincmd h
     :CocCommand clangd.switchSourceHeader
   elseif extension == "h" || extension == "hpp"
-    :only
+    :silent only
     :CocCommand clangd.switchSourceHeader vsplit
     :sleep 100m
     :wincmd h
