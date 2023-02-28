@@ -20,6 +20,8 @@ source ~/.config/nvim/plug-config/rust.vim
 source ~/.config/nvim/plug-config/zeal.vim
 source ~/.config/nvim/plug-config/vim-bookmarks.vim
 source ~/.config/nvim/plug-config/vim-easy-align.vim
+source ~/.config/nvim/plug-config/neomake.vim
+source ~/.config/nvim/nonos-toolkit-project.vim
 
 lua require('user.treesitter')
 set termguicolors
@@ -53,3 +55,4 @@ lua require('telescope').load_extension('fzf')
 lua require('telescope').load_extension('vim_bookmarks')
 
 " lua require('leap').add_default_mappings()
+

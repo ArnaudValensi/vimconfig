@@ -117,6 +117,12 @@ augroup Misc
   autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 
   autocmd FileType cs setlocal shiftwidth=4 softtabstop=4 expandtab
+
+  " Fix treesitter folding not working when file opened with Telescope.
+  " See:
+  " - https://github.com/nvim-telescope/telescope.nvim/issues/699#issuecomment-1159637962
+  " - https://github.com/nvim-treesitter/nvim-treesitter/issues/1337#issuecomment-1397639999
+  autocmd BufEnter * normal zx
 augroup END
 
 " trigger `autoread` when files changes on disk

@@ -54,4 +54,6 @@ Plug 'stefanos82/nelua.vim'
 
 Plug 'github/copilot.vim'
 
+Plug 'neomake/neomake'
+
 call plug#end()
