@@ -32,6 +32,13 @@ lua require'colorizer'.setup()
 " https://github.com/nvim-telescope/telescope.nvim
 lua << EOF
 require('telescope').setup{
+  defaults = {
+    mappings = {
+      i = {
+        ["<esc>"] = "close",
+      },
+    },
+  },
   pickers = {
     live_grep = {
       push_cursor_on_edit = true,
