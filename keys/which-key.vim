@@ -253,6 +253,10 @@ nnoremap <leader>ul yiwoconsole.log('": ', JSON.stringify(", null, 2));
 vnoremap <leader>ul yoconsole.log('": ', JSON.stringify(", null, 2));
 let g:which_key_map.u.l = 'console.log word at cursor'
 
+nnoremap <leader>up yiwoprintln("": {}", ");
+vnoremap <leader>up yoprintln("": {}", ");
+let g:which_key_map.u.p = 'println word at cursor'
+
 nmap <leader>uc :%s/^ *console\.log(.*$\n//gc<cr>
 let g:which_key_map.u.c = 'clear console.log'
 
