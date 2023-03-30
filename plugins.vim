@@ -26,7 +26,7 @@ Plug 'alok/notational-fzf-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'rust-lang/rust.vim'
 Plug 'icatalina/vim-case-change'
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tom-anders/telescope-vim-bookmarks.nvim'
 Plug 'KabbAmine/zeavim.vim'
@@ -55,5 +55,7 @@ Plug 'stefanos82/nelua.vim'
 Plug 'github/copilot.vim'
 
 Plug 'neomake/neomake'
+
+Plug 'rluba/jai.vim'
 
 call plug#end()
