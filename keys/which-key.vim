@@ -247,19 +247,6 @@ let g:which_key_map.u.f.f = 'file'
 vmap <leader>us <Plug>VSurround<div>
 let g:which_key_map.u.s = 'surround with div'
 
-" Add the following with the word under the cursor:
-" console.log('world:', JSON.stringify(world, null, 2));
-nnoremap <leader>ul yiwoconsole.log('": ', JSON.stringify(", null, 2));
-vnoremap <leader>ul yoconsole.log('": ', JSON.stringify(", null, 2));
-let g:which_key_map.u.l = 'console.log word at cursor'
-
-nnoremap <leader>up yiwoprintln("": {}", ");
-vnoremap <leader>up yoprintln("": {}", ");
-let g:which_key_map.u.p = 'println word at cursor'
-
-nmap <leader>uc :%s/^ *console\.log(.*$\n//gc<cr>
-let g:which_key_map.u.c = 'clear console.log'
-
 nmap <leader>uj ^vt::!camelcase<cr>f a'<esc>f;s',<esc>^
 let g:which_key_map.u.j = 'to JSS'
 
