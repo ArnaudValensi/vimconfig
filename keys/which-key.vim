@@ -250,6 +250,16 @@ let g:which_key_map.u.s = 'surround with div'
 nmap <leader>uj ^vt::!camelcase<cr>f a'<esc>f;s',<esc>^
 let g:which_key_map.u.j = 'to JSS'
 
+let g:which_key_map.u.c = {
+      \ 'name' : '+convert case' ,
+      \ }
+
+" Convert camelCase to snake_case for entire file
+nnoremap <leader>ucs :%s/\v([a-z])([A-Z])/\1_\l\2/gc<CR>
+" Convert camelCase to snake_case for visual selection
+vnoremap <leader>ucs :s/\v([a-z])([A-Z])/\1_\l\2/gc<CR>
+let g:which_key_map.u.c.s = 'Convert camelCase to snake_case'
+
 " let g:which_key_map['<tab>'] = 'previous buffer'
 nnoremap <leader><tab> <C-^>
 
