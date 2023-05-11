@@ -244,6 +244,9 @@ let g:which_key_map.u.f.d = 'directory'
 nnoremap <Leader>uff :let @+ = expand("%:t")<cr>
 let g:which_key_map.u.f.f = 'file'
 
+nmap <leader>ua :read! figlet -f "DOS Rebel" 
+let g:which_key_map.u.a = 'ascii art'
+
 vmap <leader>us <Plug>VSurround<div>
 let g:which_key_map.u.s = 'surround with div'
 
