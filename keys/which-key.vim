@@ -138,6 +138,19 @@ let g:which_key_map.f = {
       \ 'y' : [':Filetypes' , 'file types'],
       \ }
 
+let g:which_key_map.f.j = {
+      \ 'name' : '+jai' ,
+      \ }
+
+nnoremap <Leader>fja :Telescope live_grep search_dirs={"/mnt/d/dev-2/jai/jai-beta"}<cr>
+nnoremap <Leader>fjA :Telescope find_files search_dirs={"/mnt/d/dev-2/jai/jai-beta"}<cr>
+nnoremap <Leader>fjh :Telescope live_grep search_dirs={"/mnt/d/dev-2/jai/jai-beta/how_to"}<cr>
+nnoremap <Leader>fjH :Telescope find_files search_dirs={"/mnt/d/dev-2/jai/jai-beta/how_to"}<cr>
+let g:which_key_map.f.j.a = 'greg in all jai folder'
+let g:which_key_map.f.j.A = 'find file in all jai folder'
+let g:which_key_map.f.j.h = 'greg in how_to folder'
+let g:which_key_map.f.j.H = 'find file in how_to folder'
+
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
       \ 'c' : [':!git commit -a -m draft -n'  , 'commit draft'],
