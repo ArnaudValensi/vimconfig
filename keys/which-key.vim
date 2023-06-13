@@ -119,6 +119,7 @@ let g:which_key_map.f = {
       \ 'b' : [':Telescope buffers prompt_prefix=🔍' , 'buffers'],
       \ 'c' : [':Commits'   , 'commits'],
       \ 'C' : [':BCommits'  , 'buffer commits'],
+      \ 'd' : [':Telescope resume'   , 'resume last search'],
       \ 'f' : [':Telescope git_files prompt_prefix=🔍' , 'git files'],
       \ 'F' : [':GFiles?'   , 'modified git files'],
       \ 'g' : [':Files'     , 'files'],
