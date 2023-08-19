@@ -22,6 +22,7 @@ source ~/.config/nvim/plug-config/vim-bookmarks.vim
 source ~/.config/nvim/plug-config/vim-easy-align.vim
 source ~/.config/nvim/plug-config/neomake.vim
 source ~/.config/nvim/plug-config/copilot.vim
+source ~/.config/nvim/plug-config/vim-astro.vim
 source ~/.config/nvim/nonos-toolkit-project.vim
 
 lua require('user.treesitter')

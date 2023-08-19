@@ -58,4 +58,6 @@ Plug 'neomake/neomake'
 
 Plug 'rluba/jai.vim'
 
+Plug 'wuelnerdotexe/vim-astro'
+
 call plug#end()
