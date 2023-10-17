@@ -1,3 +1,5 @@
+let g:is_pro_host = system('hostname') =~# 'DERPR-AVALEN02'
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
@@ -52,7 +54,9 @@ Plug 'ThePrimeagen/harpoon'
 " Nelua
 Plug 'stefanos82/nelua.vim'
 
-Plug 'github/copilot.vim'
+if !g:is_pro_host
+  Plug 'github/copilot.vim'
+endif
 
 Plug 'neomake/neomake'
 
