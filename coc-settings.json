@@ -17,6 +17,10 @@
   ],
   "eslint.autoFixOnSave": true,
   "languageserver": {
+    "jai": {
+      "command": "/mnt/d/dev-2/jai/Jails/bin/jails.exe",
+      "filetypes": ["jai"]
+    },
     "zls": {
       "command": "~/zls/zls",
       "filetypes": ["zig"]
