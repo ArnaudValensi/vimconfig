@@ -24,6 +24,7 @@ source ~/.config/nvim/plug-config/neomake.vim
 source ~/.config/nvim/plug-config/copilot.vim
 source ~/.config/nvim/plug-config/vim-astro.vim
 source ~/.config/nvim/nonos-toolkit-project.vim
+source ~/.config/nvim/oob-project.vim
 
 lua require('user.treesitter')
 set termguicolors
