@@ -170,3 +170,13 @@ augroup END
 "   autocmd!
 "   autocmd BufRead,BufNewFile *.h setlocal filetype=c
 " augroup END
+
+let g:scratchpad_counter = 0
+command! Scratchpad call CreateUniqueScratchpad()
+function! CreateUniqueScratchpad()
+  let g:scratchpad_counter += 1
+  enew
+  execute 'setlocal buftype=nofile'
+  let l:scratchpad_name = 'ScratchPad' . g:scratchpad_counter
+  execute 'file ' . l:scratchpad_name
+endfunction
