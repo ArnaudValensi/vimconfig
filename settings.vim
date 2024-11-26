@@ -93,7 +93,8 @@ set colorcolumn=100
 " set timeoutlen=1000
 " set ttimeoutlen=0
 
-set number relativenumber
+" set number relativenumber
+set number
 
 set langmenu=en_US.UTF-8
 language en_US.UTF-8
