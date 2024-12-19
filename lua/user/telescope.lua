@@ -31,9 +31,12 @@ require('telescope').load_extension('fzf')
 
 require('telescope').load_extension('vim_bookmarks')
 
-vim.keymap.set("n", "<space>f.", function()
+local function find_config_files()
   require('telescope.builtin').find_files {
     cwd = vim.fn.stdpath("config")
   }
-end)
+end
+
+vim.keymap.set("n", "<space>f.", find_config_files)
+
 vim.keymap.set("n", "<space>fp", require('telescope.builtin').help_tags)
