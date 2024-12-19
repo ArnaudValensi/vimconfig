@@ -128,7 +128,6 @@ let g:which_key_map.f = {
       \ 'l' : [':Telescope current_buffer_fuzzy_find prompt_prefix=🔍'  , 'local'],
       \ 'm' : [':Marks'     , 'marks'] ,
       \ 'M' : [':Maps'      , 'normal maps'] ,
-      \ 'p' : [':Helptags'  , 'help tags'] ,
       \ 'P' : [':Tags'      , 'project tags'],
       \ 'r' : [':Telescope live_grep prompt_prefix=🔍' , 'text rg'],
       \ 's' : [':Snippets'  , 'snippets'],
@@ -143,10 +142,13 @@ let g:which_key_map.f.j = {
       \ 'name' : '+jai' ,
       \ }
 
-nnoremap <Leader>fja :Telescope live_grep search_dirs={"/mnt/d/dev-2/jai/jai-beta"}<cr>
-nnoremap <Leader>fjA :Telescope find_files search_dirs={"/mnt/d/dev-2/jai/jai-beta"}<cr>
-nnoremap <Leader>fjh :Telescope live_grep search_dirs={"/mnt/d/dev-2/jai/jai-beta/how_to"}<cr>
-nnoremap <Leader>fjH :Telescope find_files search_dirs={"/mnt/d/dev-2/jai/jai-beta/how_to"}<cr>
+let g:which_key_map.f.p = 'help tags'
+let g:which_key_map.f['.'] = 'nvim configs'
+
+nnoremap <Leader>fja :Telescope live_grep search_dirs={"/mnt/d/dev/jai/jai-beta"}<cr>
+nnoremap <Leader>fjA :Telescope find_files search_dirs={"/mnt/d/dev/jai/jai-beta"}<cr>
+nnoremap <Leader>fjh :Telescope live_grep search_dirs={"/mnt/d/dev/jai/jai-beta/how_to"}<cr>
+nnoremap <Leader>fjH :Telescope find_files search_dirs={"/mnt/d/dev/jai/jai-beta/how_to"}<cr>
 let g:which_key_map.f.j.a = 'greg in all jai folder'
 let g:which_key_map.f.j.A = 'find file in all jai folder'
 let g:which_key_map.f.j.h = 'greg in how_to folder'

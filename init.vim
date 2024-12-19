@@ -30,40 +30,8 @@ lua require('user.treesitter')
 set termguicolors
 lua require'colorizer'.setup()
 
-" TODO: Move to a user.telescope file
-" https://github.com/nvim-telescope/telescope-fzf-native.nvim
-" https://github.com/nvim-telescope/telescope.nvim
-lua << EOF
-require('telescope').setup{
-  defaults = {
-    mappings = {
-      i = {
-        ["<esc>"] = "close",
-      },
-    },
-  },
-  pickers = {
-    live_grep = {
-      push_cursor_on_edit = true,
-    },
-    buffers = {
-      show_all_buffers = true,
-      sort_lastused = true,
-      mappings = {
-        i = {
-          ["<c-d>"] = "delete_buffer",
-        }
-      }
-    }
-  }
-}
-EOF
-
-lua require('telescope').load_extension('fzf')
-" To do fuzzy search
-" :Telescope grep_string search=
-
-lua require('telescope').load_extension('vim_bookmarks')
+lua require'user.telescope'
+lua require'user.terminal'
 
 " lua require('leap').add_default_mappings()
 
