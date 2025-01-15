@@ -188,11 +188,11 @@ let g:which_key_map[';'] = 'harpoon 4'
 let g:which_key_map.p = 'paste yank register ("0p)'
 noremap <leader>p "0p
 
-" Stamp
-" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
-let g:which_key_map.s = 'stamp yank register (ciw<C-r>0<Esc>"0p)'
-nnoremap <leader>s ciw<C-r>0<Esc>
-vnoremap <leader>s "_d"0P
+" " Stamp
+" " https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+" let g:which_key_map.s = 'stamp yank register (ciw<C-r>0<Esc>"0p)'
+" nnoremap <leader>s ciw<C-r>0<Esc>
+" vnoremap <leader>s "_d"0P
 
 " Yank in word
 let g:which_key_map.y = 'yank in word'

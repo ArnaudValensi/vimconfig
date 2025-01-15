@@ -64,4 +64,9 @@ Plug 'rluba/jai.vim'
 
 Plug 'wuelnerdotexe/vim-astro'
 
+let g:yoinkIncludeDeleteOperations = 1
+Plug 'svermeulen/vim-cutlass'
+Plug 'svermeulen/vim-yoink'
+Plug 'svermeulen/vim-subversive'
+
 call plug#end()

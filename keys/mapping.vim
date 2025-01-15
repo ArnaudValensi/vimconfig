@@ -8,7 +8,7 @@ let g:mapleader = "\<Space>"
 " <tab> and <c-i> are sending the same key. To fix this, <c-i> is bound to
 " <c-n>i and iterm and alacritty are sending <c-n>i when doing <c-i>
 " See https://vi.stackexchange.com/a/25015
-nnoremap <C-n>i <C-i>
+" nnoremap <C-n>i <C-i>
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
@@ -66,3 +66,31 @@ inoremap <silent> <C-s> <ESC>:wa<CR>a
 tnoremap <leader><Esc> <C-\><C-n>
 
 nnoremap <leader>% :source %<cr>
+
+" vim-cutlass
+nnoremap m d
+xnoremap m d
+nnoremap mm dd
+nnoremap M D
+
+" vim-yoink
+nmap p <plug>(YoinkPaste_p)
+nmap P <plug>(YoinkPaste_P)
+nmap gp <plug>(YoinkPaste_gp)
+nmap gP <plug>(YoinkPaste_gP)
+nmap y <plug>(YoinkYankPreserveCursorPosition)
+xmap y <plug>(YoinkYankPreserveCursorPosition)
+nmap <c-n> <plug>(YoinkPostPasteSwapBack)
+nmap <c-p> <plug>(YoinkPostPasteSwapForward)
+nmap [y <plug>(YoinkRotateBack)
+nmap ]y <plug>(YoinkRotateForward)
+
+" vim-subversive
+xmap p <plug>(SubversiveSubstitute)
+xmap P <plug>(SubversiveSubstitute)
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+nmap S <plug>(SubversiveSubstituteToEndOfLine)
+nmap <leader>s <plug>(SubversiveSubstituteRange)
+xmap <leader>s <plug>(SubversiveSubstituteRange)
+nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
