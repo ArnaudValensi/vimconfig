@@ -2,8 +2,8 @@
 " We set it explicitely to make our position clear!
 set nocompatible
 
-let g:node_host_prog = expand("~/.fnm/node-versions/v16.15.0/installation/lib/node_modules/neovim/bin/cli.js")
-let g:coc_node_path = expand("~/.fnm/node-versions/v16.15.0/installation/bin/node")
+let g:node_host_prog = expand("~/.fnm/node-versions/v22.13.0/installation/lib/node_modules/neovim/bin/cli.js")
+let g:coc_node_path = expand("~/.fnm/node-versions/v22.13.0/installation/bin/node")
 
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
