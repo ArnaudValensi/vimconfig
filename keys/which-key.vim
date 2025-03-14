@@ -143,7 +143,8 @@ let g:which_key_map.f.j = {
       \ }
 
 let g:which_key_map.f.p = 'help tags'
-let g:which_key_map.f['.'] = 'nvim configs'
+let g:which_key_map.f['.'] = 'find nvim configs'
+let g:which_key_map.f['?'] = 'grep nvim configs'
 
 nnoremap <Leader>fja :Telescope live_grep search_dirs={"/mnt/d/dev/jai/jai-beta"}<cr>
 nnoremap <Leader>fjA :Telescope find_files search_dirs={"/mnt/d/dev/jai/jai-beta"}<cr>
@@ -188,11 +189,11 @@ let g:which_key_map[';'] = 'harpoon 4'
 let g:which_key_map.p = 'paste yank register ("0p)'
 noremap <leader>p "0p
 
-" " Stamp
-" " https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
-" let g:which_key_map.s = 'stamp yank register (ciw<C-r>0<Esc>"0p)'
-" nnoremap <leader>s ciw<C-r>0<Esc>
-" vnoremap <leader>s "_d"0P
+" Stamp
+" https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+let g:which_key_map.s = 'stamp yank register (ciw<C-r>0<Esc>"0p)'
+nnoremap <leader>s ciw<C-r>0<Esc>
+vnoremap <leader>s "_d"0P
 
 " Yank in word
 let g:which_key_map.y = 'yank in word'
@@ -260,7 +261,7 @@ let g:which_key_map.u.f.d = 'directory'
 nnoremap <Leader>uff :let @+ = expand("%:t")<cr>
 let g:which_key_map.u.f.f = 'file'
 
-nmap <leader>ua :read! figlet -f "DOS Rebel" 
+nmap <leader>ua :read! figlet -f "DOS_Rebel" 
 let g:which_key_map.u.a = 'ascii art'
 
 vmap <leader>us <Plug>VSurround<div>
