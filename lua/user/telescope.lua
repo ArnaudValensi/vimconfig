@@ -43,6 +43,6 @@ local function find_in_config_files()
     cwd = vim.fn.stdpath("config")
   }
 end
-vim.keymap.set("n", "<space>f?", find_in_config_files)
+vim.keymap.set("n", "<space>f>", find_in_config_files)
 
 vim.keymap.set("n", "<space>fp", require('telescope.builtin').help_tags)
