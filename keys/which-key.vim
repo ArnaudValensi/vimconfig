@@ -164,6 +164,9 @@ let g:which_key_map.g = {
       \ 'h' : [':0Gclog'  , 'history of current file'],
       \ }
 
+nnoremap [c :GitGutterPrevHunk<CR>
+nnoremap ]c :GitGutterNextHunk<CR>
+
 nnoremap <leader>H :lua require("harpoon.ui").toggle_quick_menu()<cr>
 nnoremap <leader>h :lua require("harpoon.mark").add_file()<cr>
 nnoremap <leader>j :lua require("harpoon.ui").nav_file(1)<cr>
