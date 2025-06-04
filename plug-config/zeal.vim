@@ -4,10 +4,13 @@ let g:dash_map = {
 
 let g:zv_zeal_executable = '/mnt/c/Program Files/Zeal/zeal.exe'
 let g:zv_file_types = {
-            \   'zig'                : 'zig,SDL',
-            \   'cpp'                : 'cpp,SDL',
-            \   'jai'                : 'SDL',
+            \   'zig'                : 'zig,doxy',
+            \   'cpp'                : 'cpp,doxy',
+            \   'jai'                : 'doxy,glsl',
             \ }
+" doxy is for SDL for some reason.
+
+let g:zv_get_docset_by = ['ft']
 
 if has("mac")
     nnoremap <leader>z <Plug>DashSearch

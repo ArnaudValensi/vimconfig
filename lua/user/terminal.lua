@@ -15,7 +15,8 @@ vim.keymap.set("n", "<space>vv", function()
   if sysname == "Darwin" then
     build_cmd = "cd ~/dev/oob/repos/oob-jai && jai build.jai - build && ./build/game --no-music\r\n"
   else
-    build_cmd = "cd /mnt/d/dev/oob/repos/oob-jai && jai.exe build.jai - build && ./build/game.exe\r\n"
+    -- build_cmd = "cd /mnt/d/dev/oob/repos/oob-jai && jai.exe build.jai - build && ./build/game.exe\r\n"
+    build_cmd = "cd /mnt/d/dev/oob/repos/oob-jai && jai.exe build.jai - build && ./build/game.exe --no-music\r\n"
   end
 
   if job_id == 0 or not vim.api.nvim_buf_is_valid(terminal_buf) then
