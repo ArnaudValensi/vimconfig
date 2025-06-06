@@ -40,7 +40,7 @@ let g:which_key_map.b = {
       \ 'a' : [':%bd!'  , 'delete all buffer'],
       \ 'd' : [':bp | bd #'  , 'delete buffer'],
       \ 'l' : ['Buffers'   , 'list buffers'],
-      \ 'o' : [':BufOnly'  , 'delete other'],
+      \ 'o' : [':BufOnly!'  , 'delete other'],
       \ 'p' : ['<C-^>'     , 'previous'],
       \ }
 
