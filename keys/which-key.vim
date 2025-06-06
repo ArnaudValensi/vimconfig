@@ -144,7 +144,7 @@ let g:which_key_map.f.j = {
 
 let g:which_key_map.f.p = 'help tags'
 let g:which_key_map.f['.'] = 'find nvim configs'
-let g:which_key_map.f['?'] = 'grep nvim configs'
+let g:which_key_map.f['>'] = 'grep nvim configs'
 
 nnoremap <Leader>fja :Telescope live_grep search_dirs={"/mnt/d/dev/jai/jai-beta"}<cr>
 nnoremap <Leader>fjA :Telescope find_files search_dirs={"/mnt/d/dev/jai/jai-beta"}<cr>
