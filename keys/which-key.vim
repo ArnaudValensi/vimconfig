@@ -123,7 +123,7 @@ let g:which_key_map.f = {
       \ 'f' : [':Telescope git_files prompt_prefix=🔍' , 'git files'],
       \ 'F' : [':GFiles?'   , 'modified git files'],
       \ 'g' : [':Files'     , 'files'],
-      \ 'h' : [':History'   , 'file history'],
+      \ 'h' : [':Telescope oldfiles', 'recent files'],
       \ 'H' : [':History:'  , 'command history'],
       \ 'l' : [':Telescope current_buffer_fuzzy_find prompt_prefix=🔍'  , 'local'],
       \ 'm' : [':Marks'     , 'marks'] ,

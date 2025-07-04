@@ -3,15 +3,26 @@
 -- https://github.com/nvim-telescope/telescope.nvim
 require('telescope').setup{
   defaults = {
+    file_ignore_patterns = { "%.git/", "node_modules/", "%.cache/" },
+    preview = {
+      treesitter = true,
+    },
     mappings = {
       i = {
         ["<esc>"] = "close",
       },
     },
+    layout_strategy = "horizontal",
+    layout_config = {
+      width = 0.95,
+      height = 0.95,
+      preview_width = 0.6,
+    },
   },
   pickers = {
     live_grep = {
       push_cursor_on_edit = true,
+      additional_args = function() return {"--hidden"} end,
     },
     buffers = {
       show_all_buffers = true,
