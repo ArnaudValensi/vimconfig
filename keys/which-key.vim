@@ -302,6 +302,9 @@ let g:which_key_map.q = {
       \ 'name' : '+quickfix' ,
       \ 'q' : [':Telescope quickfix', 'quickfix'],
       \ 'h' : [':Telescope quickfixhistory', 'history'],
+      \ 'p' : [':colder', 'older quickfix'],
+      \ 'n' : [':cnewer', 'newer quickfix'],
+      \ 'o' : [':copen', 'open quickfix window'],
       \ }
 
 " " g is for git
