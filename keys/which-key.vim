@@ -305,7 +305,10 @@ let g:which_key_map.q = {
       \ 'p' : [':colder', 'older quickfix'],
       \ 'n' : [':cnewer', 'newer quickfix'],
       \ 'o' : [':copen', 'open quickfix window'],
+      \ 'm' : 'mark current line',
       \ }
+
+nnoremap <leader>qm :caddexpr expand('%') . ':' . line('.') . ':' . getline('.')<CR>
 
 " " g is for git
 " let g:which_key_map.g = {
