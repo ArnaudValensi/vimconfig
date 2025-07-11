@@ -34,7 +34,7 @@ Plug 'tom-anders/telescope-vim-bookmarks.nvim'
 Plug 'KabbAmine/zeavim.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pantharshit00/vim-prisma'
 Plug 'junegunn/vim-easy-align'
 " Used by harpoon and telescope.

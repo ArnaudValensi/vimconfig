@@ -28,7 +28,7 @@ source ~/.config/nvim/oob-project.vim
 
 lua require('user.treesitter')
 set termguicolors
-lua require'colorizer'.setup()
+" lua require'colorizer'.setup()
 
 lua require'user.telescope'
 lua require'user.terminal'
