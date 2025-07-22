@@ -233,6 +233,10 @@ let g:which_key_map.u = {
       \ 'r' : [':RnvimrToggle'    , 'ranger'],
       \ }
 
+nnoremap <Leader>ut :%s/\s*$//<cr>
+vnoremap <Leader>ut :s/\s*$//<cr>
+let g:which_key_map.u.t = 'remove trailing spaces'
+
 let g:which_key_map['w'] = {
       \ 'name' : '+windows' ,
       \ 'w' : ['<C-W>w'     , 'other window'],
