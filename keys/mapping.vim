@@ -8,7 +8,9 @@ let g:mapleader = "\<Space>"
 " <tab> and <c-i> are sending the same key. To fix this, <c-i> is bound to
 " <c-n>i and iterm and alacritty are sending <c-n>i when doing <c-i>
 " See https://vi.stackexchange.com/a/25015
-" nnoremap <C-n>i <C-i>
+if !has('win32') && !has('win64')
+  nnoremap <C-n>i <C-i>
+endif
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
